@@ -1,0 +1,125 @@
+{% extends "myPathApp/base_myPathPage.html" %}
+{% load static %}
+
+{% block link_block %}
+<link rel="stylesheet" href="{% static "homeApp/css/main.css" %}"/>
+<link rel="stylesheet" href="{% static "myPathApp/css/myPath_main.css" %}"/>
+<link rel="stylesheet" href="{% static "myPathApp/css/myPathFirstPage.css" %}"/>
+{% endblock %}
+
+{% block info_block %}
+  <div class="myPath__Info">
+    <div class="myPath__Info--overlay">
+      <h1 class="myPath__Info--header-1">What is a path?</h1>
+      <p class="myPath__Info--paragraph">
+        Everyday in a persons life there are<span class="choices myPathSpan">choices</span>and<span class="decisions myPathSpan">decisions</span>.
+        It differs from the type of coffee one drinks to more life changing ones like moving
+        to another country. The<span class="path myPathSpan">path</span>is what comes out of all these decisions and choices.
+        In other words the path is our life. Each one is unique and interesting on their own right.
+
+      </p>
+      <p class="myPath__Info--paragraph">
+        Here in my site I would like to share <span class="myLife">my life</span>
+        or as I call it <span class="mypath">My Path.</span>
+      </p>
+    </div>
+  </div>
+{% endblock %}
+
+{% block video_block %}
+
+  <div class="myPath__video--row">
+
+    <div class="myPath__video myPath__video--1-container">
+      <!-- <iframe class="myPath__video--1" src="{% static "myPathApp/img/video-1.mov" %}" width="191.25" height="340" frameborder="0" allowfullscreen></iframe> -->
+      <iframe width="191.25" height="340" src="https://www.youtube.com/embed/RsvLjCpUO08" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="myPath__video--info">
+        <div class="myPath__video--date">
+          <svg class="card-education__icon">
+            <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-calendar"></use>
+          </svg>
+          <h2 class="myPath__video--header-2 ">06.8.2020</h2>
+        </div>
+        <div class="myPath__video--paragraph">
+          <h3 class="myPath__video--header-3">Content</h3>
+          <p><span class="chev">&rang;</span>Django / html-css</p>
+          <p><span class="chev">&rang;</span>Future plans</p>
+          <p><span class="chev">&rang;</span>Driving license</p>
+          <p><span class="chev">&rang;</span>Running</p>
+          <p><span class="chev">&rang;</span>Internship</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="myPath__video myPath__video--2-container">
+      <!-- <iframe class="myPath__video--2" src="{% static "myPathApp/img/video-2.mp4" %}" width="340" height="204" frameborder="0" allowfullscreen></iframe> -->
+      <iframe width="340" height="204" src="https://www.youtube.com/embed/xIxng2AI8JU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="myPath__video--info">
+        <div class="myPath__video--date">
+          <svg class="card-education__icon">
+            <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-calendar"></use>
+          </svg>
+          <h2 class="myPath__video--header-2 ">29.7.2020</h2>
+        </div>
+        <div class="myPath__video--paragraph">
+          <h3 class="myPath__video--header-3">Content</h3>
+          <p><span class="chev">&rang;</span>Sample Django Site</p>
+          <p><span class="chev">&rang;</span>Showing the features</p>
+          <p><span class="chev">&rang;</span>Future plans</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="myPath__video--row">
+    <div class="myPath__video myPath__video--2-container">
+      <!-- <iframe class="myPath__video--2" src="{% static "myPathApp/img/video-3.mp4" %}" width="340" height="204" frameborder="0" allowfullscreen></iframe> -->
+      <iframe width="340" height="204" src="https://www.youtube.com/embed/XVmC6pc3424" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="myPath__video--info">
+        <div class="myPath__video--date">
+          <svg class="card-education__icon">
+            <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-calendar"></use>
+          </svg>
+          <h2 class="myPath__video--header-2 ">22.7.2020</h2>
+        </div>
+        <div class="myPath__video--paragraph">
+          <h3 class="myPath__video--header-3">Content</h3>
+          <p><span class="chev">&rang;</span>Sample Django Site</p>
+          <p><span class="chev">&rang;</span>Showing the features</p>
+          <p><span class="chev">&rang;</span>Future plans</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="myPath__video myPath__video--1-container">
+      <!-- <iframe class="myPath__video--1" src="{% static "myPathApp/img/video-4.mov" %}" width="191.25" height="340" frameborder="0" allowfullscreen></iframe> -->
+      <iframe width="191.25" height="340" src="https://www.youtube.com/embed/iBTbSipWLEg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="myPath__video--info">
+        <div class="myPath__video--date">
+          <svg class="card-education__icon">
+            <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-calendar"></use>
+          </svg>
+          <h2 class="myPath__video--header-2 ">22.7.2020</h2>
+        </div>
+        <div class="myPath__video--paragraph">
+          <h3 class="myPath__video--header-3">Content</h3>
+          <p><span class="chev">&rang;</span>Django</p>
+          <p><span class="chev">&rang;</span>Some opinions</p>
+          <p><span class="chev">&rang;</span>Future plans</p>
+          <p><span class="chev">&rang;</span>Talking about my website</p>
+          <p><span class="chev">&rang;</span>Internship / research</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+  <!-- <iframe class="myPath__video--2" src="{% static "myPathApp/img/video-2.mp4" %}" width="540" height="324" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe class="myPath__video--3" src="{% static "myPathApp/img/video-3.mp4" %}" width="540" height="324" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe class="myPath__video--4" src="{% static "myPathApp/img/video-4.mov" %}" width="303.75" height="540" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+{% endblock %}

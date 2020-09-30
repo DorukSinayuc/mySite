@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Doruk</title>
+
+    {% block link_block %}
+    <link rel="stylesheet" href="{% static "homeApp/css/main.css" %}"/>
+    {% endblock %}
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+  </head>
+  <body>
+
+
+  <div class="page__grid--CV">
+
+      <nav class="nav-cvPage">
+        <div class="navbar__CV">
+          <div class="navbar__CV--style-Left"></div>
+          <div class="navbar__CV--style-Right"></div>
+          <div class="navbar__CV--container">
+            <ul class="navbar__links">
+              <li class="navbar__links-element">
+                <a href="{% url 'homeApp:home' %}" class="navbar__links--1">Home</a>
+              </li>
+              <li class="navbar__links-element">
+                <a href="{% url 'homeApp:cv' %}" class="navbar__links--2">Curriculum Vitae(CV)</a>
+              </li>
+              <li class="navbar__links-element">
+                <a href="{% url 'myPathApp:mypath' %}" class="navbar__links--3">My Path</a>
+              </li>
+              <li class="navbar__links-element">
+                <a href="{% url 'blogApp:blogHome' %}" class="navbar__links--4">Blog</a>
+              </li>
+              <li class="navbar__links-element">
+                <a href="{% url 'contactApp:contactHome' %}" class="navbar__links--5">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      {% block body_block %}
+      <!-- Content of the page goes here -->
+      {% endblock %}
+
+
+  </div>
+
+
+
+
+
+  </body>
+</html>

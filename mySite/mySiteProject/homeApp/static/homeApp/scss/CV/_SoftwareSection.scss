@@ -1,0 +1,442 @@
+.Software {
+
+  &__cv-title {
+    margin-top: 5rem;
+    margin-left: 4.17vw;
+    margin-bottom: 3rem;
+
+    grid-column: 1/-1;
+
+    color: #37474f;
+    // color: transparent;
+    letter-spacing: .2rem;
+    // -webkit-background-clip: text;
+
+    text-transform: uppercase;
+
+    display: grid;
+    grid-template-columns: max-content .942fr;
+    grid-template-rows: 100%;
+    align-items: center;
+
+    &::after {
+      content: "";
+      height: 3px;
+      display: block;
+      background-color: #37474f;
+
+      }
+
+    .title-style {
+      border: .3rem solid #37474f;
+      padding: 2rem;
+      }
+  }
+
+
+
+  &__container {
+    display: grid;
+    grid-template-rows: repeat(6,minmax(min-content, 13.3333vh));
+    grid-template-columns: repeat(24,4.17vw);
+  }
+
+  &__logo {
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+
+    display: grid;
+    grid-template-rows: repeat(12,6.6667vh);
+    grid-template-columns: repeat(24,4.17vw);
+
+    &--header-2 {
+      grid-row: 1/3;
+      grid-column: 5/11;
+      font-size: 4rem;
+      font-weight: 500;
+      align-self: center;
+      justify-self: center;
+
+      background-image: linear-gradient(to right,#e44d26,#f16529,#0277bd,#039be5);
+      color: transparent;
+      letter-spacing: .1rem;
+      -webkit-background-clip: text;
+
+      &-Django {
+        background-image: linear-gradient(to right,#00796b,#00695c,#004d40);
+        color: transparent;
+        letter-spacing: .1rem;
+        -webkit-background-clip: text;
+
+        margin-top: -1rem;
+      }
+
+      &-mysql {
+        background-image: linear-gradient(to right,#00758f,#f29111);
+        color: transparent;
+        letter-spacing: .1rem;
+        -webkit-background-clip: text;
+
+        margin-top: -1rem;
+      }
+
+      &-siemensnx {
+        background-image: linear-gradient(to right,#00abad,#b8202d);
+        color: transparent;
+        letter-spacing: .1rem;
+        -webkit-background-clip: text;
+
+        margin-top: -1rem;
+      }
+
+      &-imageJ {
+        background-image: linear-gradient(to right,#212122,#edbb2d);
+        color: transparent;
+        letter-spacing: .1rem;
+        -webkit-background-clip: text;
+
+        margin-top: -1rem;
+      }
+    }
+
+    &--paragraph {
+      grid-row: 3/5;
+      grid-column: 2/14;
+
+      font-size: 1.6rem;
+      font-weight: 300;
+      justify-self: center;
+      align-self: center;
+
+      margin-top: -1.5rem;
+    }
+
+    &--links {
+      grid-row: 5/7;
+      grid-column: 2/14;
+      display: flex;
+
+      align-items: center;
+      justify-content: space-between;
+
+      &-1:link,
+      &-1:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 2rem;
+        display: inline-block;
+        border-radius: 10rem;
+
+        font-size: 1.6rem;
+        border: none;
+        cursor: pointer;
+        background-color: #f16529;
+        color: #fff;
+      }
+
+      &-2:link,
+      &-2:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 2rem;
+        display: inline-block;
+        border-radius: 10rem;
+
+        font-size: 1.6rem;
+        border: none;
+        cursor: pointer;
+        background-color: #0277bd;
+        color: #fff;
+      }
+
+      &-3:link,
+      &-3:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 2rem;
+        display: inline-block;
+        border-radius: 10rem;
+
+        font-size: 1.6rem;
+        border: none;
+        cursor: pointer;
+        background-color: #039be5;
+        color: #fff;
+      }
+
+      &-Django {
+        grid-row: 5/7;
+        grid-column: 2/14;
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+
+        &-1 {
+          text-transform: uppercase;
+          text-decoration: none;
+          padding: 1.5rem 2rem;
+          display: inline-block;
+          border-radius: 10rem;
+
+          font-size: 1.6rem;
+          border: none;
+          cursor: pointer;
+          background-color: #00796b;
+          color: #fff;
+        }
+      }
+
+      &-mysql {
+        justify-content: space-around;
+
+        &-1 {
+          text-transform: uppercase;
+          text-decoration: none;
+          padding: 1.5rem 2rem;
+          display: inline-block;
+          border-radius: 10rem;
+
+          font-size: 1.6rem;
+          border: none;
+          cursor: pointer;
+          background-color: #00758f;
+          color: #fff;
+        }
+        &-2 {
+          text-transform: uppercase;
+          text-decoration: none;
+          padding: 1.5rem 2rem;
+          display: inline-block;
+          border-radius: 10rem;
+
+          font-size: 1.6rem;
+          border: none;
+          cursor: pointer;
+          background-color: #f29111;
+          color: #fff;
+        }
+      }
+
+      &-siemensnx {
+        justify-content: center;
+        &-1 {
+          text-transform: uppercase;
+          text-decoration: none;
+          padding: 1.5rem 2rem;
+          display: inline-block;
+          border-radius: 10rem;
+
+          font-size: 1.6rem;
+          border: none;
+          cursor: pointer;
+          background-color: #00abad;
+          color: #fff;
+        }
+      }
+
+      &-imageJ {
+        justify-content: center;
+        &-1 {
+          text-transform: uppercase;
+          text-decoration: none;
+          padding: 1.5rem 2rem;
+          display: inline-block;
+          border-radius: 10rem;
+
+          font-size: 1.6rem;
+          border: none;
+          cursor: pointer;
+          background-color: #212122;
+          color: #fff;
+        }
+      }
+
+
+    }
+
+
+    &:hover &--img:not(:hover)  {
+      opacity: .3;
+    }
+
+    &:hover &--img:not(:hover) &--Info {
+      display: none;
+    }
+
+    &:hover &--img:hover &--Info {
+      opacity: 1;
+    }
+
+    &--Info {
+      position: absolute;
+      top: 374rem;
+      left: 20.85vw;
+      width: 58.38vw;
+      height: 33.2rem;
+
+      display: grid;
+      grid-template-rows: repeat(6,6.6667vh);
+      grid-template-columns: repeat(14,4.17vw);
+
+      background-color: white;
+      border-radius: 10rem;
+      box-shadow: $Education-box-shadow;
+      opacity: 1;
+
+      &-html-css {
+        z-index: 10;
+      }
+
+      &-django {
+        opacity: 0;
+        // transition: all .2s;
+      }
+
+      &-mysql {
+        opacity: 0;
+        // transition: all .2s;
+      }
+
+      &-siemensnx {
+        opacity: 0;
+        // transition: all .2s;
+      }
+
+      &-ImageJ {
+        opacity: 0;
+        // transition: all .2s;
+      }
+    }
+
+    &--img {
+      transition: all 1s;
+    }
+
+    //html-css
+
+    &--html-css {
+      grid-row: 1/-1;
+      grid-column: 1/-1;
+      display: grid;
+      grid-template-rows: repeat(12,6.6667vh);
+      grid-template-columns: repeat(24,4.17vw);
+    }
+
+    &--html {
+      grid-row: 1/4;
+      grid-column: 2/span 3;
+
+      padding: .2rem;
+      // height: 100%;
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    &--css {
+      grid-row: 1/4;
+      grid-column: 5/span 3;
+
+      // padding: 2.1rem;
+      // height: 100%;
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    //django
+
+    &--djangoBox {
+      grid-row: 1/4;
+      grid-column: 9/12;
+    }
+
+    &--django {
+      height: 100%;
+      width: 100%;
+      display: block;
+      object-fit: contain;
+
+      opacity: .2;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    //mysql
+
+    &--mysqlBox {
+      grid-row: 1/4;
+      grid-column: 13/16;
+    }
+
+    &--mysql {
+      height: 100%;
+      width: 100%;
+      display: block;
+      object-fit: contain;
+
+      opacity: .2;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    //siemensnx
+
+    &--siemensnxBox {
+      grid-row: 1/4;
+      grid-column: 17/20;
+    }
+
+    &--siemensnx {
+      height: 100%;
+      width: 100%;
+      display: block;
+      object-fit: contain;
+
+      opacity: .2;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    //ImageJ
+
+    //ImageJBox is written outside of the.software class
+
+    &--Imagej {
+      height: 100%;
+      width: 100%;
+      display: block;
+      object-fit: cover;
+
+      opacity: .2;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__infoBox {
+    grid-row: 5/11;
+    grid-column: 6/20;
+
+    // margin-top: 4rem;
+    // margin-bottom: 4rem;
+    background-color: white;
+    border-radius: 10rem;
+    box-shadow: $Education-box-shadow;
+  }
+} //Software end
+
+.Software__logo--imageJBox {
+  grid-row: 1/4;
+  grid-column: 21/24;
+}

@@ -1,0 +1,77 @@
+{% extends "myPathApp/base_myPathPage.html" %}
+{% load static %}
+
+{% block link_block %}
+<link rel="stylesheet" href="{% static "homeApp/css/main.css" %}"/>
+<link rel="stylesheet" href="{% static "myPathApp/css/myPath_main.css" %}"/>
+<link rel="stylesheet" href="{% static "myPathApp/css/myPathFifthPage.css" %}"/>
+{% endblock %}
+
+{% block video_block %}
+<div class="myPath__video--row myPath__video--row-v2">
+
+  <div class="myPath__video myPath__video--1-container">
+    <!-- <iframe class="myPath__video--1" src="{% static "myPathApp/img/video-5.mov" %}" width="191.25" height="340" frameborder="0" allowfullscreen></iframe> -->
+    <iframe width="191.25" height="340" src="https://www.youtube.com/embed/Se0LB3IZDG0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="myPath__video--info">
+      <div class="myPath__video--date">
+        <svg class="card-education__icon">
+          <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-calendar"></use>
+        </svg>
+        <h2 class="myPath__video--header-2 ">07.6.2020</h2>
+      </div>
+      <div class="myPath__video--paragraph">
+        <h3 class="myPath__video--header-3">Content</h3>
+        <p><span class="chev">&rang;</span>Day plans</p>
+        <p><span class="chev">&rang;</span>Feelings</p>
+        <p><span class="chev">&rang;</span>Updates</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="myPath__video myPath__video--1-container">
+    <!-- <iframe class="myPath__video--1" src="{% static "myPathApp/img/video-6.mov" %}" width="191.25" height="340" frameborder="0" allowfullscreen></iframe> -->
+  <iframe width="191.25" height="340" src="https://www.youtube.com/embed/RvOS3HqhAbU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="myPath__video--info">
+      <div class="myPath__video--date">
+        <svg class="card-education__icon">
+          <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-calendar"></use>
+        </svg>
+        <h2 class="myPath__video--header-2 ">06.6.2020</h2>
+      </div>
+      <div class="myPath__video--paragraph">
+        <h3 class="myPath__video--header-3">Content</h3>
+        <p><span class="chev">&rang;</span>Update</p>
+        <p><span class="chev">&rang;</span>Day plans</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="myPath__video--row myPath__video--row-v2">
+
+  <div class="myPath__video myPath__video--1-container">
+    <!-- <iframe class="myPath__video--1" src="{% static "myPathApp/img/video-7.mov" %}" width="191.25" height="340" frameborder="0" allowfullscreen></iframe> -->
+    <iframe width="191.25" height="340" src="https://www.youtube.com/embed/GYvaUxLJ1wQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="myPath__video--info">
+      <div class="myPath__video--date">
+        <svg class="card-education__icon">
+          <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-calendar"></use>
+        </svg>
+        <h2 class="myPath__video--header-2 ">06.6.2020</h2>
+      </div>
+      <div class="myPath__video--paragraph">
+        <h3 class="myPath__video--header-3">Content</h3>
+        <p><span class="chev">&rang;</span>Update</p>
+        <p><span class="chev">&rang;</span>Day plans</p>
+        <p><span class="chev">&rang;</span>Future plans</p>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,389 @@
+{% extends "blogApp/base_blogPage.html" %}
+{% load static %}
+
+{% block link_block %}
+<link rel="stylesheet" href="{% static "homeApp/css/main.css" %}"/>
+<link rel="stylesheet" href="{% static "myPathApp/css/myPath_main.css" %}"/>
+<link rel="stylesheet" href="{% static "blogApp/css/blog_main.css" %}"/>
+{% endblock %}
+
+
+
+{% block intro_block %}
+  <div class="blog__Intro">
+    <div class="blog__Intro--box">
+      <h1 class="blog__Intro--header-1 blog__Intro--header-1-welcome">
+        Welcome,
+      </h1>
+      <h1 class="blog__Intro--header-1">to my <span class="blog">blog.</span></h1>
+      <p class="blog__Intro--paragraph">
+        Here I would be sharing my research done towards various subjects,
+        stuff that I find interesting and from time to time my notes regarding
+        classes that I take during at my time in university.
+      </p>
+    </div>
+  </div>
+
+  <div class="blog__Intro--navigation">
+
+    <div class="blog__Intro--navigation-box">
+      <h1 class="blog__Intro--navigation-header-1">Navigation</h1>
+      <h2 class="blog__Intro--navigation-header-2 margin-top-md">
+        <a class="js--scroll-to-experiments" href="#">Experiments</a>
+      </h2>
+      <h2 class="blog__Intro--navigation-header-2 margin-top-md">
+        <a class="js--scroll-to-intTopics" href="#">Interesting topics</a>
+      </h2>
+      <h2 class="blog__Intro--navigation-header-2 margin-top-md margin-bottom-md">
+        <a class="js--scroll-to-notes" href="#">Notes</a>
+      </h2>
+    </div>
+
+  </div>
+
+  <section class="blog__content--containerExperiments blog__content--container">
+    <h1 class="blog__content--container-header-1">Experiments</h1>
+
+    <div class="blog__content">
+      <a href="{% url "blogApp:206-7" %}">
+        <div class="blog__content--box blog__content--box-1">
+          <div class="blog__content--box-postName">
+            <h1 class="blog__content--header-1">Charpy Impact Testing</h1>
+            <h2 class="blog__content--header-2">METE206 - Experiment 7</h2>
+          </div>
+          <div class="blog__content--box-author">
+            <h3 class="blog__content--header-3">Written by,</h3>
+            <h3 class="blog__content--header-2-name">Doruk Sinayuc</h3>
+            <div class="blog__content--date">
+              <p class="blog__content--paragraph blog__content--paragraph-1">Upload Date: <span class="date">28.9.2020</span></p>
+              <p class="blog__content--paragraph blog__content--paragraph-2">Experiment Date: <span class="date">15.05.2020</span></p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="blog__content">
+      <a href="{% url "blogApp:206-6" %}">
+        <div class="blog__content--box">
+          <div class="blog__content--box-postName">
+            <h1 class="blog__content--header-1">Calorimetry</h1>
+            <h2 class="blog__content--header-2">METE206 - Experiment 6</h2>
+          </div>
+          <div class="blog__content--box-author">
+            <h3 class="blog__content--header-3">Written by,</h3>
+            <h3 class="blog__content--header-2-name">Doruk Sinayuc</h3>
+            <div class="blog__content--date">
+              <p class="blog__content--paragraph blog__content--paragraph-1">Upload Date: <span class="date">28.9.2020</span></p>
+              <p class="blog__content--paragraph blog__content--paragraph-2">Experiment Date: <span class="date">8.05.2020</span></p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="blog__content">
+      <a href="{% url "blogApp:206-5" %}">
+        <div class="blog__content--box">
+          <div class="blog__content--box-postName">
+            <h1 class="blog__content--header-1">Temperature Measurement</h1>
+            <h2 class="blog__content--header-2">METE206 - Experiment 5</h2>
+          </div>
+          <div class="blog__content--box-author">
+            <h3 class="blog__content--header-3">Written by,</h3>
+            <h3 class="blog__content--header-2-name">Doruk Sinayuc</h3>
+            <div class="blog__content--date">
+              <p class="blog__content--paragraph blog__content--paragraph-1">Upload Date: <span class="date">28.9.2020</span></p>
+              <p class="blog__content--paragraph blog__content--paragraph-2">Experiment Date: <span class="date">24.04.2020</span></p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="blog__content">
+      <a href="{% url "blogApp:206-4" %}">
+        <div class="blog__content--box">
+          <div class="blog__content--box-postName">
+            <h1 class="blog__content--header-1">Crystallography and X-Ray Diffraction</h1>
+            <h2 class="blog__content--header-2">METE206 - Experiment 4</h2>
+          </div>
+          <div class="blog__content--box-author">
+            <h3 class="blog__content--header-3">Written by,</h3>
+            <h3 class="blog__content--header-2-name">Doruk Sinayuc</h3>
+            <div class="blog__content--date">
+              <p class="blog__content--paragraph blog__content--paragraph-1">Upload Date: <span class="date">28.9.2020</span></p>
+              <p class="blog__content--paragraph blog__content--paragraph-2">Experiment Date: <span class="date">10.4.2020</span></p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="blog__content">
+      <a href="{% url "blogApp:206-3" %}">
+        <div class="blog__content--box">
+          <div class="blog__content--box-postName">
+            <h1 class="blog__content--header-1">Microstructure of Materials</h1>
+            <h2 class="blog__content--header-2">METE206 - Experiment 3</h2>
+          </div>
+          <div class="blog__content--box-author">
+            <h3 class="blog__content--header-3">Written by,</h3>
+            <h3 class="blog__content--header-2-name">Doruk Sinayuc</h3>
+            <div class="blog__content--date">
+              <p class="blog__content--paragraph blog__content--paragraph-1">Upload Date: <span class="date">28.9.2020</span></p>
+              <p class="blog__content--paragraph blog__content--paragraph-2">Experiment Date: <span class="date">3.04.2020</span></p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="blog__content">
+      <a href="{% url "blogApp:206-2" %}">
+        <div class="blog__content--box">
+          <div class="blog__content--box-postName">
+            <h1 class="blog__content--header-1">Property Control by Heat Treatment</h1>
+            <h2 class="blog__content--header-2">METE206 - Experiment 2</h2>
+          </div>
+          <div class="blog__content--box-author">
+            <h3 class="blog__content--header-3">Written by,</h3>
+            <h3 class="blog__content--header-2-name">Doruk Sinayuc</h3>
+            <div class="blog__content--date">
+              <p class="blog__content--paragraph blog__content--paragraph-1">Upload Date: <span class="date">28.9.2020</span></p>
+              <p class="blog__content--paragraph blog__content--paragraph-2">Experiment Date: <span class="date">13.03.2020</span></p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="blog__content">
+      <a href="{% url "blogApp:206-1" %}">
+        <div class="blog__content--box">
+          <div class="blog__content--box-postName">
+            <h1 class="blog__content--header-1">Tension Test</h1>
+            <h2 class="blog__content--header-2">METE206 - Experiment 1</h2>
+          </div>
+          <div class="blog__content--box-author">
+            <h3 class="blog__content--header-3">Written by,</h3>
+            <h3 class="blog__content--header-2-name">Doruk Sinayuc</h3>
+            <div class="blog__content--date">
+              <p class="blog__content--paragraph blog__content--paragraph-1">Upload Date: <span class="date">28.9.2020</span></p>
+              <p class="blog__content--paragraph blog__content--paragraph-2">Experiment Date: <span class="date">06.03.2020</span></p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="blog__content">
+      <a href="{% url "blogApp:215-8" %}">
+        <div class="blog__content--box">
+          <div class="blog__content--box-postName">
+            <h1 class="blog__content--header-1">3D Printing</h1>
+            <h2 class="blog__content--header-2">METE215 - Experiment 8</h2>
+          </div>
+          <div class="blog__content--box-author">
+            <h3 class="blog__content--header-3">Written by,</h3>
+            <h3 class="blog__content--header-2-name">Doruk Sinayuc</h3>
+            <div class="blog__content--date">
+              <p class="blog__content--paragraph blog__content--paragraph-1">Upload Date: <span class="date">28.9.2020</span></p>
+              <p class="blog__content--paragraph blog__content--paragraph-2">Experiment Date: <span class="date">21.11.2019</span></p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="blog__content">
+      <a href="{% url "blogApp:215-7" %}">
+        <div class="blog__content--box">
+          <div class="blog__content--box-postName">
+            <h1 class="blog__content--header-1">Mechanical Shaping of Materials</h1>
+            <h2 class="blog__content--header-2">METE215 - Experiment 7</h2>
+          </div>
+          <div class="blog__content--box-author">
+            <h3 class="blog__content--header-3">Written by,</h3>
+            <h3 class="blog__content--header-2-name">Doruk Sinayuc</h3>
+            <div class="blog__content--date">
+              <p class="blog__content--paragraph blog__content--paragraph-1">Upload Date: <span class="date">28.9.2020</span></p>
+              <p class="blog__content--paragraph blog__content--paragraph-2">Experiment Date: <span class="date">5.12.2019</span></p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="blog__content">
+      <a href="{% url "blogApp:215-6" %}">
+        <div class="blog__content--box">
+          <div class="blog__content--box-postName">
+            <h1 class="blog__content--header-1">Solidification of Materials</h1>
+            <h2 class="blog__content--header-2">METE215 - Experiment 6</h2>
+          </div>
+          <div class="blog__content--box-author">
+            <h3 class="blog__content--header-3">Written by,</h3>
+            <h3 class="blog__content--header-2-name">Doruk Sinayuc</h3>
+            <div class="blog__content--date">
+              <p class="blog__content--paragraph blog__content--paragraph-1">Upload Date: <span class="date">28.9.2020</span></p>
+              <p class="blog__content--paragraph blog__content--paragraph-2">Experiment Date: <span class="date">28.11.2019</span></p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="blog__content">
+      <a href="{% url "blogApp:215-5" %}">
+        <div class="blog__content--box">
+          <div class="blog__content--box-postName">
+            <h1 class="blog__content--header-1">Leaching and Electrowinning</h1>
+            <h2 class="blog__content--header-2">METE215 - Experiment 5</h2>
+          </div>
+          <div class="blog__content--box-author">
+            <h3 class="blog__content--header-3">Written by,</h3>
+            <h3 class="blog__content--header-2-name">Doruk Sinayuc</h3>
+            <div class="blog__content--date">
+              <p class="blog__content--paragraph blog__content--paragraph-1">Upload Date: <span class="date">28.9.2020</span></p>
+              <p class="blog__content--paragraph blog__content--paragraph-2">Experiment Date: <span class="date">21.11.2019</span></p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="blog__content">
+      <a href="{% url "blogApp:215-4" %}">
+        <div class="blog__content--box">
+          <div class="blog__content--box-postName">
+            <h1 class="blog__content--header-1">Production of Polymer <br> Short Fiber Composites</h1>
+            <h2 class="blog__content--header-2">METE215 - Experiment 5</h2>
+          </div>
+          <div class="blog__content--box-author">
+            <h3 class="blog__content--header-3">Written by,</h3>
+            <h3 class="blog__content--header-2-name">Doruk Sinayuc</h3>
+            <div class="blog__content--date">
+              <p class="blog__content--paragraph blog__content--paragraph-1">Upload Date: <span class="date">28.9.2020</span></p>
+              <p class="blog__content--paragraph blog__content--paragraph-2">Experiment Date: <span class="date">7.11.2019</span></p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="blog__content">
+      <a href="{% url "blogApp:215-3" %}">
+        <div class="blog__content--box">
+          <div class="blog__content--box-postName">
+            <h1 class="blog__content--header-1">Sol-Gel Processing</h1>
+            <h2 class="blog__content--header-2">METE215 - Experiment 3</h2>
+          </div>
+          <div class="blog__content--box-author">
+            <h3 class="blog__content--header-3">Written by,</h3>
+            <h3 class="blog__content--header-2-name">Doruk Sinayuc</h3>
+            <div class="blog__content--date">
+              <p class="blog__content--paragraph blog__content--paragraph-1">Upload Date: <span class="date">28.9.2020</span></p>
+              <p class="blog__content--paragraph blog__content--paragraph-2">Experiment Date: <span class="date">31.10.2019</span></p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="blog__content">
+      <a href="{% url "blogApp:215-2" %}">
+        <div class="blog__content--box">
+          <div class="blog__content--box-postName">
+            <h1 class="blog__content--header-1">Fabrication of Ceramics by <br> Pressing and Firing</h1>
+            <h2 class="blog__content--header-2">METE215 - Experiment 2</h2>
+          </div>
+          <div class="blog__content--box-author">
+            <h3 class="blog__content--header-3">Written by,</h3>
+            <h3 class="blog__content--header-2-name">Doruk Sinayuc</h3>
+            <div class="blog__content--date">
+              <p class="blog__content--paragraph blog__content--paragraph-1">Upload Date: <span class="date">28.9.2020</span></p>
+              <p class="blog__content--paragraph blog__content--paragraph-2">Experiment Date: <span class="date">26.10.2019</span></p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="blog__content">
+      <a href="{% url "blogApp:215-1" %}">
+        <div class="blog__content--box">
+          <div class="blog__content--box-postName">
+            <h1 class="blog__content--header-1">Particle Size Reduction and Analysis</h1>
+            <h2 class="blog__content--header-2">METE215 - Experiment 1</h2>
+          </div>
+          <div class="blog__content--box-author">
+            <h3 class="blog__content--header-3">Written by,</h3>
+            <h3 class="blog__content--header-2-name">Doruk Sinayuc</h3>
+            <div class="blog__content--date">
+              <p class="blog__content--paragraph blog__content--paragraph-1">Upload Date: <span class="date">28.9.2020</span></p>
+              <p class="blog__content--paragraph blog__content--paragraph-2">Experiment Date: <span class="date">21.11.2019</span></p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+  </section>
+
+  <section class="blog__content--containerInterestingTopics blog__content--container">
+    <h1 class="blog__content--container-header-1">Interesting Topics</h1>
+
+    <div class="blog__content">
+      <a href="">
+        <div class="blog__content--box blog__content--box-1">
+          <div class="blog__content--box-postName">
+            <h1 class="blog__content--header-1">Coming Soon</h1>
+            <h2 class="blog__content--header-2">............</h2>
+          </div>
+          <div class="blog__content--box-author">
+            <h3 class="blog__content--header-3"></h3>
+            <h3 class="blog__content--header-2-name"></h3>
+            <div class="blog__content--date">
+              <p class="blog__content--paragraph blog__content--paragraph-1"><span class="date"></span></p>
+              <p class="blog__content--paragraph blog__content--paragraph-2"><span class="date"></span></p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+  </section>
+
+  <section class="blog__content--containerNotes blog__content--container">
+    <h1 class="blog__content--container-header-1">Notes</h1>
+
+    <div class="blog__content">
+      <a href="">
+        <div class="blog__content--box blog__content--box-1">
+          <div class="blog__content--box-postName">
+            <h1 class="blog__content--header-1">Coming Soon</h1>
+            <h2 class="blog__content--header-2">............</h2>
+          </div>
+          <div class="blog__content--box-author">
+            <h3 class="blog__content--header-3"></h3>
+            <h3 class="blog__content--header-2-name"></h3>
+            <div class="blog__content--date">
+              <p class="blog__content--paragraph blog__content--paragraph-1"><span class="date"></span></p>
+              <p class="blog__content--paragraph blog__content--paragraph-2"><span class="date"></span></p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+  </section>
+
+
+
+
+{% endblock %}
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="{% static "blogApp/js/main.js" %}"></script>

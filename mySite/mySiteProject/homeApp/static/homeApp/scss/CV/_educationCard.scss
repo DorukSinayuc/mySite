@@ -1,0 +1,371 @@
+.cv-title {
+  grid-column: 1/-1;
+
+  color: #283593;
+  // color: transparent;
+  letter-spacing: .2rem;
+  // -webkit-background-clip: text;
+
+  text-transform: uppercase;
+
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-template-rows: 100%;
+  align-items: center;
+
+  &::after {
+    content: "";
+    height: 3px;
+    display: block;
+    background-color: #283593;
+
+    }
+
+  .title-style {
+    border: .3rem solid #283593;
+    padding: 2rem;
+    }
+
+}
+
+.card-education {
+
+  grid-column: 1/-1;
+
+  display: grid;
+  grid-template-rows: minmax(min-content, 45vh);
+
+  background-color: white;
+  box-shadow: $Education-box-shadow;
+
+  &__icon {
+    height: 5rem;
+    width: 5rem;
+    fill: $primary-color-gold;
+  }
+
+  &__imgRightContainer {
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+
+    display: grid;
+    grid-template-columns: repeat(22,4.17vw);
+    grid-template-rows: repeat(12,3.3333vh);
+  }
+
+  &__imgRight {
+    grid-row: 1/-1;
+    grid-column: 13/-1;
+
+
+    background-image: url('/static/homeApp/img/metu-1.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 10% 100%);
+
+    &--logo {
+      grid-row: 1/4;
+      grid-column: 20/-1;
+
+      background-size: cover;
+      background-position: center;
+
+      background-image: url('/static/homeApp/img/metu-logo-white.jpg');
+      z-index: 1;
+    }
+
+    &--gpa {
+
+      &-1 {
+        color: $primary-color-gold-dark-1;
+      }
+
+      &-2 {
+        font-weight: 300;
+      }
+    }
+
+  }
+
+  &__infoRight {
+    grid-row: 1/-1;
+    grid-column: 1/13;
+
+    display: grid;
+    grid-template-rows: repeat(3,min-content);
+    grid-template-columns: repeat(12,4.17vw);
+
+    &--date {
+      grid-row: 1/2;
+      grid-column: 1/-1;
+      margin: 2rem 2rem;
+
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+
+      h2 {
+
+        background-image: linear-gradient(to right,#42a5f5,#2196f3,#1e88e5);
+        color: transparent;
+        letter-spacing: .1rem;
+        -webkit-background-clip: text;
+      }
+    }
+
+    &--uni {
+      grid-row: 2/3;
+      grid-column: 1/-1;
+
+      margin: 0rem 2rem 1rem 2rem;
+
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    &--gpaInfo {
+      grid-row: 3/4;
+      grid-column: 1/6;
+      margin-top: 2rem;
+      margin-left: 2rem;
+      padding: .5rem;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+
+      box-shadow: $Education-box-shadow;
+      border-radius: 10rem;
+    }
+
+    &--rightArrow {
+      grid-row: 3/4;
+      grid-column: 6/8;
+      width: 100%;
+      margin-top: 3rem;
+
+    }
+
+    &--topOfClass {
+      grid-row: 3/4;
+      grid-column: 8/13;
+      margin-top: 3rem;
+      font-weight: 300 !important;
+      color: $color-linkedIn;
+    }
+
+
+  }
+
+
+  // The css for when the image is in the left side
+
+  &__imgLeftContainer {
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+
+    display: grid;
+    grid-template-columns: repeat(22,4.17vw);
+    grid-template-rows: repeat(12,3.3333vh);
+  }
+
+  &__imgLeft {
+    grid-row: 1/-1;
+    grid-column: 1/11;
+
+
+    background-image: url('/static/homeApp/img/metu-2.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+
+    &--logo {
+      grid-row: 10/-1;
+      grid-column: 1/4;
+
+      background-size: cover;
+      background-position: center;
+
+      background-image: url('/static/homeApp/img/metu-logo-white.jpg');
+      z-index: 1;
+    }
+  } // end of .__imgLeft
+
+  &__infoLeft {
+    grid-row: 1/-1;
+    grid-column: 11/-1;
+
+    display: grid;
+    grid-template-rows: repeat(3,min-content);
+    grid-template-columns: repeat(12,4.17vw);
+
+    &--date {
+      grid-row: 1/2;
+      grid-column: 1/-1;
+      margin: 2rem 4rem;
+
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+
+      h2 {
+        background-image: linear-gradient(to right,#42a5f5,#2196f3,#1e88e5);
+        color: transparent;
+        letter-spacing: .1rem;
+        -webkit-background-clip: text;
+      }
+    }
+
+    &--uni {
+      grid-row: 2/3;
+      grid-column: 1/-1;
+      margin: 0rem 2rem 2rem 4rem;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    &--gpaInfo {
+      grid-row: 3/4;
+      grid-column: 4/9;
+      margin-top: 1rem;
+      padding: .5rem;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      background-color: linear-gradient(#fff,$color-grey-veryLight);
+      box-shadow: $Education-box-shadow;
+      border-radius: 10rem;
+    }
+  }
+
+  // css style of the second card that has an image on the right
+
+  &__imgRight-2 {
+    grid-row: 1/-1;
+    grid-column: 13/-1;
+
+
+    background-image: url('/static/homeApp/img/final-1.png');
+    background-size: cover;
+
+    opacity: 0.9;
+
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 10% 100%);
+  }
+
+  &__infoRight2--topOfClass {
+    font-size: 2.5rem !important;
+  }
+
+  &__infoRight--gpaInfo2 {
+    grid-row: 4/5;
+    grid-column: 1/6;
+
+  }
+
+  .card-education__infoRight--date__highschool {
+    margin-bottom: 1rem;
+  }
+
+  &__highSchoolInfo {
+    grid-row: 3/4;
+    grid-column: 1/-1;
+
+    display: flex;
+    flex-direction: column;
+
+    &--1 {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      margin-top: 1rem;
+
+      &__points {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 3rem 1rem 3rem;
+        margin-left: 2rem;
+        border-radius: 10rem;
+        box-shadow: $Education-box-shadow;
+      }
+
+      &__rightArrow {
+        height: 5rem;
+        width: 5rem;
+        fill: $primary-color-gold;
+        margin-left: 3rem;
+      }
+
+      &__topOfClass {
+        margin-left: 2rem;
+        font-weight: 300 !important;
+        color: $color-linkedIn;
+        font-size: 3rem;
+      }
+    }
+
+    &--2 {
+      margin-top: 3rem;
+    }
+
+  }
+
+  // css style of the second card that has an image on the left
+
+  &__imgLeft-2 {
+    grid-row: 1/-1;
+    grid-column: 1/11;
+
+
+    background-image: url('/static/homeApp/img/primary-1.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+  }
+
+  &__primarySchool {
+    grid-row: 2/3;
+    grid-column: 3/11;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 2rem;
+    padding: 2rem;
+
+    border-radius: 10rem;
+
+    box-shadow: $Education-box-shadow;
+
+    &--header-3 {
+      font-size: 3rem;
+      font-weight: 500;
+    }
+
+    &--header-4 {
+      font-size: 2.5rem;
+    }
+
+    &--paragraph {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+  }
+
+
+} // .card-education end

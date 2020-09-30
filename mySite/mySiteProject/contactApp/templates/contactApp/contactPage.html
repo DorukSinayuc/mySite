@@ -1,0 +1,56 @@
+{% extends "contactApp/base_contactPage.html" %}
+{% load static %}
+
+{% block link_block %}
+<link rel="stylesheet" href="{% static "homeApp/css/main.css" %}"/>
+<link rel="stylesheet" href="{% static "contactApp/css/contact_main.css" %}"/>
+<link rel="stylesheet" href="{% static "blogApp/css/blog_main.css" %}"/>
+{% endblock %}
+
+
+{% block content_block %}
+
+<div class="contact__form--container">
+  <div class="contact__form--container-IMG">
+    <form class="contact__form" method="POST">
+      <h1 class="contact__form--header-1">Reach Out To Me</h1>
+      <ul class="contact__form--list">
+          <div class="contact__form--name">
+            <li id="subject" class="contact__form--item">{{ form.name }}</li>
+            <li id="email" class="contact__form--item">{{ form.surname }}</li>
+          </div>
+          <li id="message" class="contact__form--item">{{ form.email }}</li>
+          <li id="message" class="contact__form--item">{{ form.content }}</li>
+      </ul>
+      {% csrf_token %}
+      <input type="submit" class="contact__form--input" value="Submit">
+    </form>
+    <div class="contact__form--socialMedia">
+      <div class="contact__form--socialMedia__links">
+        <a href="#" class="contact__form--socialMedia__links--1">
+          <svg>
+            <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-instagram"></use>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/doruk-s%C4%B1nayu%C3%A7-75a4a9147/" class="contact__form--socialMedia__links--2">
+          <svg>
+            <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-linkedin2"></use>
+          </svg>
+        </a>
+        <a href="#" class="contact__form--socialMedia__links--3">
+          <svg>
+            <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-facebook"></use>
+          </svg>
+        </a>
+        <a href="#" class="contact__form--socialMedia__links--4">
+          <svg>
+            <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-twitter"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "blogApp/base_blogPage.html" %}
+{% load static %}
+
+{% block link_block %}
+<link rel="stylesheet" href="{% static "homeApp/css/main.css" %}"/>
+<link rel="stylesheet" href="{% static "myPathApp/css/myPath_main.css" %}"/>
+<link rel="stylesheet" href="{% static "blogApp/css/blog_main.css" %}"/>
+{% endblock %}
+
+{% block content_block %}
+  <div class="blog__details--container">
+    <iframe src="{% static "blogApp/img/215-3.pdf"%}" width="100%" height="100%"></iframe>
+  </div>
+{% endblock %}

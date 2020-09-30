@@ -1,0 +1,412 @@
+{% extends "homeApp/base_cvPage.html" %}
+{% load static %}
+
+
+{% block link_block %}
+<link rel="stylesheet" href="{% static "homeApp/css/main.css" %}"/>
+{% endblock %}
+
+{% block body_block %}
+
+<section class="Education">
+    <div class="cv-title">
+      <h1 class="header-1"><span class="title-style">Education</span></h1>
+    </div>
+
+    <div class="card-education">
+      <div class="card-education__imgRightContainer">
+        <!-- <div class="card-education__styleImg"></div> -->
+        <div class="card-education__imgRight"></div>
+        <div class="card-education__imgRight--logo"></div>
+        <div class="card-education__infoRight">
+          <div class="card-education__infoRight--date">
+            <svg class="card-education__icon">
+              <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-calendar"></use>
+            </svg>
+            <h2 class="header-2 margin-top-sm">2018 - Current</h2>
+          </div>
+          <div class="card-education__infoRight--uni">
+            <h3 class="header-3"><span class="uni">Middle East Technical University, </span>Ankara, TURKEY</h3>
+            <h4 class="header-4"><span class="uni__department">Metallurgical and Materials Engineering Department</span></h4>
+            <p class="paragraph">Junior (3rd Year) Student</p>
+          </div>
+          <div class="card-education__infoRight--gpaInfo">
+            <h3 class="header-3 card-education__imgRight--gpa-1 ">Current C.GPA</h3>
+            <h3 class="header-3 card-education__imgRight--gpa-2">3.65/4.00</h3>
+          </div>
+          <svg class="card-education__icon card-education__infoRight--rightArrow">
+            <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-arrow-right2"></use>
+          </svg>
+          <h2 class="header-2 card-education__infoRight--topOfClass">Top of Class</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-education">
+      <div class="card-education__imgLeftContainer">
+        <div class="card-education__styleImgLeft"></div>
+        <div class="card-education__imgLeft"></div>
+        <div class="card-education__imgLeft--logo"></div>
+        <div class="card-education__infoLeft">
+          <div class="card-education__infoLeft--date">
+            <svg class="card-education__icon">
+              <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-calendar"></use>
+            </svg>
+            <h2 class="header-2 margin-top-sm">2019 - Current</h2>
+          </div>
+          <div class="card-education__infoLeft--uni">
+            <h3 class="header-3"><span class="uni">Middle East Technical University, </span>Ankara, TURKEY</h3>
+            <h4 class="header-4"><span class="uni__department">Industrial Engineering Department</span></h4>
+            <p class="paragraph">Minor in Production Planning and Control</p>
+          </div>
+          <div class="card-education__infoLeft--gpaInfo">
+            <h3 class="header-3 card-education__imgRight--gpa-1 ">Current C.GPA</h3>
+            <h3 class="header-3 card-education__imgRight--gpa-2">3.50/4.00</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-education">
+      <div class="card-education__imgRightContainer">
+        <div class="card-education__imgRight-2"></div>
+        <div class="card-education__imgRight--logo-2"></div>
+        <div class="card-education__infoRight">
+          <div class="card-education__infoRight--date card-education__infoRight--date__highschool">
+            <svg class="card-education__icon">
+              <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-calendar"></use>
+            </svg>
+            <h2 class="header-2 margin-top-sm">2014 - 2018</h2>
+          </div>
+          <div class="card-education__infoRight--uni">
+            <h3 class="header-3"><span class="uni">Private Final Highschool, </span>Ankara, TURKEY</h3>
+          </div>
+          <div class="card-education__highSchoolInfo">
+            <div class="card-education__highSchoolInfo--1">
+              <div class="card-education__highSchoolInfo--1__points">
+                <h3 class="header-3 card-education__imgRight--gpa-1 ">Graduating Score</h3>
+                <h3 class="header-3 card-education__imgRight--gpa-2">98.61/100</h3>
+              </div>
+              <svg class="card-education__highSchoolInfo--1__rightArrow">
+                <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-arrow-right2"></use>
+              </svg>
+              <h2 class="card-education__highSchoolInfo--1__topOfClass">Graduated 1<sup>st</sup> in School</h2>
+            </div>
+            <div class="card-education__highSchoolInfo--1 card-education__highSchoolInfo--2">
+              <div class="card-education__highSchoolInfo--1__points">
+                <h3 class="header-3 card-education__imgRight--gpa-1 ">University Exam Result</h3>
+                <h3 class="header-3 card-education__imgRight--gpa-2">14796 / 2.260.273</h3>
+              </div>
+              <svg class="card-education__highSchoolInfo--1__rightArrow">
+                <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-arrow-right2"></use>
+              </svg>
+              <h2 class="card-education__highSchoolInfo--1__topOfClass">Inside 0.65%</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-education">
+      <div class="card-education__imgLeftContainer">
+        <div class="card-education__styleImgLeft-2"></div>
+        <div class="card-education__imgLeft-2"></div>
+        <div class="card-education__imgLeft--logo-2"></div>
+        <div class="card-education__infoLeft">
+          <div class="card-education__infoLeft--date">
+            <svg class="card-education__icon">
+              <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-calendar"></use>
+            </svg>
+            <h2 class="header-2 margin-top-sm">2008 - 2011</h2>
+          </div>
+          <div class="card-education__primarySchool">
+            <h3 class="card-education__primarySchool--header-3"><span class="uni">Highfield Primary School</h3>
+            <h4 class="card-education__primarySchool--header-4"><span class="uni__department">London</span></h4>
+            <p class="card-education__primarySchool--paragraph">England</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</section>
+
+<section class="Experience">
+  <div class="overlay">
+
+    <div class="overlay__cv-title">
+      <h1 class="header-1"><span class="title-style">Experience</span></h1>
+    </div>
+
+    <div class="overlay__research">
+      <div class="overlay__research--imgContainer">
+        <img src="{% static "homeApp/img/lab-1.JPG" %}" alt="lab pic" class="overlay__research--img">
+      </div>
+      <div class="overlay__research--infoContainer">
+        <div class="overlay__research--date">
+          <svg class="overlay__research--date-icon">
+            <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-calendar"></use>
+          </svg>
+          <h2 class="overlay__research--header-2 margin-top-sm">July 2019 - Current</h2>
+        </div>
+        <div class="overlay__research--labName">
+          <h2 class="overlay__research--header-2">Undergraduate Research</h2>
+          <h2 class="overlay__research--header-3">Colloid and Smart Materials Laboratory</h2>
+          <h3 class="overlay__research--header-3">Assist. Prof. Dr. Simge Çınar</h3>
+        </div>
+        <div class="overlay__research--points">
+          <ul class="overlay__research--points-items">
+            <li class="point-1"><span class="chev">&rang;</span><p class="overlay__research--paragraph">Actively taken role in the planning and carrying out of unique experiments.</p></li>
+            <li class="point-2"><span class="chev">&rang;</span><p class="overlay__research--paragraph">Used MS Excel and ImageJ to gain data on the distribution of bismuth-tin particles as well as the visualization of the same data </p></li>
+            <li class="point-3"><span class="chev">&rang;</span><p class="overlay__research--paragraph">Carried out literature search on Janus particles</p></li>
+            <li class="point-4"><span class="chev">&rang;</span><p class="overlay__research--paragraph">Created thin films as to change the morphology of the particles</p></li>
+            <li class="point-5"><span class="chev">&rang;</span><p class="overlay__research--paragraph">Applied optical microscopy on film to observe morphological changes</p></li>
+            <li class="point-6"><span class="chev">&rang;</span><p class="overlay__research--paragraph">Worked together with fellow researchers to overcome arising problems</p></li>
+            <li class="point-7"><span class="chev">&rang;</span><p class="overlay__research--paragraph">Learned how to conduct experiments efficiently, cleanly and in a safe manner</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Beware used the same classes as research part therefore it says research in some of the classes -->
+
+    <div class="overlay__club">
+      <div class="overlay__club--imgContainer">
+        <img src="{% static "homeApp/img/club-1.JPG" %}" alt="lab pic" class="overlay__club--img">
+      </div>
+      <div class="overlay__research--infoContainer overlay__club--infoContainer">
+        <div class="overlay__research--date">
+          <svg class="overlay__research--date-icon">
+            <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-calendar"></use>
+          </svg>
+          <h2 class="overlay__research--header-2 margin-top-sm">October 2018 - September 2019</h2>
+        </div>
+        <div class="overlay__research--labName">
+          <h2 class="overlay__research--header-2">Board Member</h2>
+          <h2 class="overlay__research--header-3">Society of Material Science</h2>
+        </div>
+        <div class="overlay__research--points">
+          <ul class="overlay__research--points-items">
+            <li class="point-1"><span class="chev">&rang;</span><p class="overlay__research--paragraph">Arranged an event that led to a considerable revenue with fellow members</p></li>
+            <li class="point-2"><span class="chev">&rang;</span><p class="overlay__research--paragraph">Managed meetings in an orderly and disciplined manner</p></li>
+            <li class="point-3"><span class="chev">&rang;</span><p class="overlay__research--paragraph">Lent my assistance in the organization of technical trips</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="Software">
+
+  <div class="Software__cv-title">
+    <h1 class="header-1"><span class="title-style">Software</span></h1>
+  </div>
+
+  <div class="Software__container">
+    <div class="Software__logo">
+
+      <div class="Software__logo--img Software__logo--html-css">
+        <img src="{% static "homeApp/img/html.png" %}" alt="lab pic" class="Software__logo--html">
+        <img src="{% static "homeApp/img/css.png" %}" alt="lab pic" class="Software__logo--css">
+        <div class="Software__logo--Info Software__logo--Info-html-css">
+          <h2 class="Software__logo--header-2">CSS - HTML</h2>
+          <p class="Software__logo--paragraph">
+            Website development was something that always excited me and I decided
+            that it was time to learn. Css and Html are key concepts towards
+            web development therefore I took great care to learn it with diligence.
+            My first encounter with the concepts was when I was taking a Full stackpath
+            web developer bootcamp course. From there I deepened my learning with two
+            additional cources which got me familiar with flex-box and grid that
+            are advanced css concepts.
+          </p>
+          <div class="Software__logo--links">
+            <a href="https://www.udemy.com/course/python-and-django-full-stack-web-developer-bootcamp/" class="Software__logo--links-1">
+              Full Stack Course
+            </a>
+            <a href="https://www.udemy.com/share/101WqoAkIeeFxRQno=/" class="Software__logo--links-2">
+              Beginner CSS course
+            </a>
+            <a href="https://www.udemy.com/share/101WmqAkIeeFxRQno=/" class="Software__logo--links-3">
+              Advanced CSS course
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="Software__logo--img Software__logo--djangoBox">
+        <img src="{% static "homeApp/img/django.png" %}" alt="lab pic" class="Software__logo--django">
+        <div class="Software__logo--Info Software__logo--Info-django">
+          <h2 class="Software__logo--header-2 Software__logo--header-2-Django">DJANGO</h2>
+          <p class="Software__logo--paragraph Software__logo--paragraph-Django">
+            Django is a high level python webframework. It is a concept that I have learned as to
+            combine the knowledge I have learned from CSS and HTML to make an fully fledged website.
+            Django is considered as back-end therefore by learning it came the power of authentication,
+            databases, security, mapping of Urls and much more. I learned Django from a 32 hour course on udemy
+            and with it I coded along the making of 2 websites. For my own website I am also using Django
+            and I believe that by mastering it I will be very close to my goal of becoming a full stack
+            web developer.
+          </p>
+          <div class="Software__logo--links-Django">
+            <a href="https://www.udemy.com/course/python-and-django-full-stack-web-developer-bootcamp/" class="Software__logo--links-Django-1">
+              Full Stack Course
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="Software__logo--img Software__logo--mysqlBox">
+        <img src="{% static "homeApp/img/mysql.png" %}" alt="lab pic" class="Software__logo--mysql">
+        <div class="Software__logo--Info Software__logo--Info-mysql">
+          <h2 class="Software__logo--header-2 Software__logo--header-2-mysql">MYSQL</h2>
+          <p class="Software__logo--paragraph Software__logo--paragraph-mysql">
+            MySql is a open source Relational Database Management System. I was
+            introduced to mySql from one of my minor classes in industrial engineering.
+            From there I realised how important databases were and got more interested.
+            To further improve myself I started 2 courses on udemy. By the end I was
+            very good at making queries and doing busieness analysis.
+          </p>
+          <div class="Software__logo--links Software__logo--links-mysql">
+            <a href="https://www.udemy.com/share/101qUAAkIeeFxRQno=/" class="Software__logo--links-mysql-1">
+              Beginner MySql Course
+            </a>
+            <a href="https://www.udemy.com/share/1022lgAkIeeFxRQno=/" class="Software__logo--links-mysql-2">
+              Advanced MySql Course
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="Software__logo--img Software__logo--siemensnxBox">
+        <img src="{% static "homeApp/img/siemensnx.png" %}" alt="lab pic" class="Software__logo--siemensnx">
+        <div class="Software__logo--Info Software__logo--Info-siemensnx">
+          <h2 class="Software__logo--header-2 Software__logo--header-2-siemensnx">Siemens Nx</h2>
+          <p class="Software__logo--paragraph Software__logo--paragraph-siemensnx">
+            In my first year in university I took a course about this particular program.
+            During the 14 weeks of the semester there were plenty of assignments
+            and midterms for me to make very stable foundation on the software.
+            It is certain that with little work into it I can add to the foundation
+            that I built and use it in anyway necessary.
+          </p>
+          <div class="Software__logo--links Software__logo--links-siemensnx">
+            <a href="#" class="Software__logo--links-siemensnx-1">
+              University Course
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="Software__logo--img Software__logo--imageJBox">
+        <img src="{% static "homeApp/img/Imagej.png" %}" alt="lab pic" class="Software__logo--Imagej">
+        <div class="Software__logo--Info Software__logo--Info-ImageJ">
+          <h2 class="Software__logo--header-2 Software__logo--header-2-imageJ">ImageJ</h2>
+          <p class="Software__logo--paragraph Software__logo--paragraph-imageJ">
+            I started my undergraduate research under assist. prof. Dr. Simge Çınar
+            in the summer of my first year. We were tasked to make an experiment
+            and from that experiment we needed to analyze the size and shape of the particles
+            that could be seen in the SEM images. To do this we used the image processing program
+            ImageJ.
+          </p>
+          <div class="Software__logo--links Software__logo--links-imageJ">
+            <a href="#" class="Software__logo--links-imageJ-1">
+              Undergraduate Research
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- <div class="Software__infoBox">
+
+    </div> -->
+  </div>
+
+</section>
+
+<section class="Languages">
+  <div class="Languages__overlay">
+
+    <div class="Languages__overlay--cv-title">
+      <h1 class="header-1"><span class="title-style">Languages</span></h1>
+    </div>
+
+    <div class="Languages__overlay--cards">
+
+      <div class="Languages__overlay--cards-1">
+        <svg class="Languages__overlay--icon">
+          <use xlink:href="{% static "homeApp/img/UK-union-flag.svg" %}#svg5005"></use>
+        </svg>
+        <h2 class="Languages__overlay--header-2">English</h2>
+        <h3 class="Languages__overlay--header-3">Experience</h3>
+        <p class="Languages__overlay--paragraph">
+          At age 8 I moved to England where I lived for about 4 Years.
+          During my 4 year of stay I went to highfield primary school.
+          This is where I learned English from scratch and by the time
+          that I had to move back to Turkey I could write, speak and talk
+          as any native speaker.
+        </p>
+      </div>
+
+      <div class="Languages__overlay--cards-2">
+        <svg class="Languages__overlay--icon">
+          <use xlink:href="{% static "homeApp/img/Turkey-4.svg" %}#svg2"></use>
+        </svg>
+        <h2 class="Languages__overlay--header-2">Turkish</h2>
+        <h3 class="Languages__overlay--header-3">Experience</h3>
+        <p class="Languages__overlay--paragraph">
+          I was born in Turkey and I still am living here. Therefore
+          Turkish is my native language. I can read, write and talk
+          at a native level.
+        </p>
+      </div>
+
+      <div class="Languages__overlay--cards-3">
+        <svg class="Languages__overlay--icon-Russia">
+          <use xlink:href="{% static "homeApp/img/Russia-3.svg" %}#svg378"></use>
+        </svg>
+        <h2 class="Languages__overlay--header-2">Russian</h2>
+        <h3 class="Languages__overlay--header-3">Experience</h3>
+        <p class="Languages__overlay--paragraph">
+          During my education in middle and highschool my preferred second language
+          was russian. With my very helpful russian teacher miss Mariana I managed to
+          learn the russian alphabet and also gave myself a stable foundation. Currently,
+          my russian level is beginner.
+        </p>
+      </div>
+
+    </div>
+
+
+
+  </div>
+</section>
+
+<section class="Footer">
+  <div class="social-media__links social-media__links--CV">
+    <a href="#" class="social-media__links--1">
+      <svg>
+        <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-instagram"></use>
+      </svg>
+    </a>
+    <a href="https://www.linkedin.com/in/doruk-s%C4%B1nayu%C3%A7-75a4a9147/" class="social-media__links--2">
+      <svg>
+        <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-linkedin2"></use>
+      </svg>
+    </a>
+    <a href="#" class="social-media__links--3">
+      <svg>
+        <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-facebook"></use>
+      </svg>
+    </a>
+    <a href="#" class="social-media__links--4">
+      <svg>
+        <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-twitter"></use>
+      </svg>
+    </a>
+  </div>
+  <div class="Footer__Style-1"></div>
+  <div class="Footer__Style-2"></div>
+</section>
+
+
+{% endblock %}

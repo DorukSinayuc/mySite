@@ -1,0 +1,59 @@
+@import "variables";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //1rem = 10px
+}
+
+body {
+  font-family: $font;
+  background-color: $color-grey-veryLight;
+  color: #000;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+////////////////
+//Home Page////
+//////////////
+
+// .page {
+//   // height: 100vh;
+//
+//   display: grid;
+//   grid-template-columns: 100vw;
+//   grid-template-rows: 100vh;
+// }
+
+.content {
+  grid-row: 4/22;
+  grid-column: 4/16;
+
+  display: grid;
+  grid-template-rows: repeat(18,4.17vh);
+  grid-template-columns: repeat(24,3.54vw);
+}
+
+////////////////
+//CV Page//////
+//////////////
+
+.page__grid {
+
+  &--CV {
+    display: grid;
+    grid-template-rows: repeat(2,4.17vh) repeat(5,min-content);
+    grid-template-columns: repeat(24,4.17vw);
+    // display: grid;
+    // grid-template-rows: repeat(24,4.17vh);
+    // grid-template-columns: repeat(3,2.5vw) repeat(12,7.08vw) repeat(3,2.5vw);
+  }
+}

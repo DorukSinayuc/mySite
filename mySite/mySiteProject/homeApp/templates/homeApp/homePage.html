@@ -1,0 +1,54 @@
+{% extends "homeApp/base_homeApp.html" %}
+{% load static %}
+{% load svg %}
+
+{% block link_block %}
+<link rel="stylesheet" href="{% static "homeApp/css/main.css" %}"/>
+{% endblock %}
+
+
+{% block body_block %}
+  <div class="card">
+    <img src="{% static "homeApp/img/mainImageMe.JPG" %}" alt="me" class="card__img">
+    <div class="card__about-me">
+      <h1 class="hello header-1">Hello there,</h1>
+      <h2 class="name header-2">I am <span class="name__full">Doruk Sınayuç</span></h2>
+      <p class="paragraph">I am very happy and proud to say that this site is entirely coded by myself using css and html for front-end and django for the back-end.</p>
+      <p class="paragraph">Now a little about myself:</p>
+    </div>
+    <div class="card__icons">
+      <div class="card__icons--1">
+        <svg class="card__icons--university card__icons--all">
+          <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-bank"></use>
+        </svg>
+        <h3 class="header-3">University</h3>
+        <p class="paragraph">Middle East Technical University</p>
+      </div>
+      <div class="card__icons--2">
+        <svg class="card__icons--bachelor card__icons--all">
+          <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-pencil2"></use>
+        </svg>
+        <h3 class="header-3">Bachelor</h3>
+        <div class="card__icons--bachelor-1">
+          <p class="paragraph">Metallurgical and Materials Engineering </p>
+          <p class="paragraph">Industrial Engineering (Minor) </p>
+        </div>
+      </div>
+      <div class="card__icons--3">
+        <svg class="card__icons--mail card__icons--all">
+          <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-envelop"></use>
+        </svg>
+        <h3 class="header-3">Email</h3>
+        <p class="paragraph">dsinayuc@gmail.com</p>
+      </div>
+      <div class="card__icons--4">
+        <svg class="card__icons--age card__icons--all">
+          <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-user"></use>
+        </svg>
+        <h3 class="header-3">Age</h3>
+        <p class="paragraph">20 Years Old</p>
+      </div>
+
+    </div>
+  </div>
+{% endblock %}

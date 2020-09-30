@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Doruk</title>
+
+    {% block link_block %}
+    <link rel="stylesheet" href="{% static "homeApp/css/main.css" %}"/>
+    {% endblock %}
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+  </head>
+  <body>
+
+
+    <div class="page__grid">
+
+        <nav class="nav-homePage">
+          <div class="navbar">
+            <ul class="navbar__links">
+              <li class="navbar__links-element">
+                <a href="{% url 'homeApp:home' %}" class="navbar__links--1">Home</a>
+              </li>
+              <li class="navbar__links-element">
+                <a href="{% url 'homeApp:cv' %}" class="navbar__links--2">Curriculum Vitae(CV)</a>
+              </li>
+              <li class="navbar__links-element">
+                <a href="{% url 'myPathApp:mypath' %}" class="navbar__links--3">My Path</a>
+              </li>
+              <li class="navbar__links-element">
+                <a href="{% url 'blogApp:blogHome' %}" class="navbar__links--4">Blog</a>
+              </li>
+              <li class="navbar__links-element">
+                <a href="{% url 'contactApp:contactHome' %}" class="navbar__links--5">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="social-media">
+          <div class="social-media__links">
+            <a href="#" class="social-media__links--1">
+              <svg>
+                <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-instagram"></use>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/doruk-s%C4%B1nayu%C3%A7-75a4a9147/" class="social-media__links--2">
+              <svg>
+                <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-linkedin2"></use>
+              </svg>
+            </a>
+            <a href="#" class="social-media__links--3">
+              <svg>
+                <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-facebook"></use>
+              </svg>
+            </a>
+            <a href="#" class="social-media__links--4">
+              <svg>
+                <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-twitter"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="styling__left">
+          <div class="styling__left--1"></div>
+          <div class="styling__left--2"></div>
+          <div class="styling__left--3"></div>
+          <div class="styling__left--4"></div>
+        </div>
+
+        <div class="styling__right">
+          <div class="styling__right--1"></div>
+          <div class="styling__right--2"></div>
+          <div class="styling__right--3"></div>
+          <div class="styling__right--4"></div>
+        </div>
+
+        <div class="content">
+          {% block body_block %}
+          <!-- Content of the page goes here -->
+          {% endblock %}
+        </div>
+
+
+    </div>
+
+
+
+
+
+  </body>
+</html>
