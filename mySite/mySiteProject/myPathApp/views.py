@@ -11,7 +11,7 @@ class myPathThirdPageView(TemplateView):
     template_name = 'myPathApp/myPathPage-ThirdPage.html'
 
 class myPathFourthPageView(TemplateView):
-    template_name = 'myPathApp/myPathPage-FourthPage.html'
+    template_name = 'myPathApp/mypathPage-FourthPage.html'
 
 class myPathFifthPageView(TemplateView):
     template_name = 'myPathApp/myPathPage-FifthPage.html'
