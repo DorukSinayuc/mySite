@@ -100,7 +100,6 @@
 }
 
 .myPath__video--paragraph p {
-  display: flex;
   margin-top: 1rem;
   align-self: flex-start;
 }

@@ -990,7 +990,7 @@ body {
 }
 
 .Software__logo:hover .Software__logo--img:not(:hover) .Software__logo--Info {
-  display: none;
+  opacity: 0;
 }
 
 .Software__logo:hover .Software__logo--img:hover .Software__logo--Info {
@@ -1037,8 +1037,8 @@ body {
 }
 
 .Software__logo--html-css {
-  grid-row: 1/-1;
-  grid-column: 1/-1;
+  grid-row: 1/4;
+  grid-column: 1/7;
   display: grid;
   grid-template-rows: repeat(12, 6.6667vh);
   grid-template-columns: repeat(24, 4.17vw);
