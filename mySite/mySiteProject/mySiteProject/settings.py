@@ -28,7 +28,7 @@ SECRET_KEY = 'luxie8p#9%3cnu%p0njw7al(9z(%c_dx33i^kx1e*5u-i9jc46'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['doruk.sinayuc.com',]
+ALLOWED_HOSTS = ['doruk.sinayuc.com','127.0.0.1']
 
 
 # Application definition
@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     # 'livereload',
     'django.contrib.staticfiles',
-    # 'django_sass',
+    'django_sass',
     'homeApp',
     'myPathApp',
     'blogApp',
