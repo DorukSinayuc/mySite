@@ -75,6 +75,22 @@ body {
   grid-template-columns: repeat(24, 3.54vw);
 }
 
+@media (max-width: 81.25em) {
+  .content {
+    grid-template-rows: min-content;
+    grid-template-columns: min-content;
+    align-content: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .content {
+    grid-template-rows: repeat(18, 4.17vh);
+    grid-template-columns: repeat(24, 3.54vw);
+  }
+}
+
 @media (max-width: 37.5em) {
   .content {
     grid-template-rows: min-content;
@@ -1299,6 +1315,7 @@ $breakpoint argument choices:
 @media (max-width: 37.5em) {
   .page__grid {
     grid-template-rows: repeat(3, min-content);
+    overflow: hidden;
   }
 }
 
@@ -1419,10 +1436,24 @@ $breakpoint argument choices:
   grid-template-columns: repeat(22, 3.54vw);
 }
 
+@media (max-width: 81.25em) {
+  .content .card {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: min-content minmax(50rem, min-content);
+  }
+}
+
 @media (max-width: 56.25em) {
   .content .card {
+    grid-column: 2/24;
+    grid-row: 2/18;
     transform: scale(1.2);
     box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.52);
+    grid-template-rows: repeat(16, 4.17vh);
+    grid-template-columns: repeat(22, 3.54vw);
   }
 }
 
@@ -1445,6 +1476,13 @@ $breakpoint argument choices:
   display: block;
   outline-offset: 2rem;
   transition: all .2s;
+}
+
+@media (max-width: 81.25em) {
+  .content .card__img {
+    grid-column: 2/3;
+    grid-row: 1/-1;
+  }
 }
 
 @media (max-width: 56.25em) {
@@ -1472,6 +1510,13 @@ $breakpoint argument choices:
   padding: 2.5rem;
 }
 
+@media (max-width: 81.25em) {
+  .content .card__about-me {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+}
+
 @media (max-width: 56.25em) {
   .content .card__about-me {
     grid-column: 1/10;
@@ -1487,6 +1532,7 @@ $breakpoint argument choices:
     grid-row: 1/-1;
     padding: 2.5rem 2.5rem 2.5rem 2.5rem;
     margin-top: 0rem;
+    text-align: center;
   }
 }
 
@@ -1511,6 +1557,15 @@ $breakpoint argument choices:
   display: grid;
   grid-template-rows: repeat(8, 4.17vh);
   grid-template-columns: repeat(12, 3.54vw);
+}
+
+@media (max-width: 81.25em) {
+  .content .card__icons {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+  }
 }
 
 @media (max-width: 56.25em) {
@@ -1559,7 +1614,7 @@ $breakpoint argument choices:
   }
   .content .card__icons--1 svg {
     margin-right: -14rem;
-    margin-left: 5rem;
+    margin-left: 1rem;
   }
   .content .card__icons--1 h3 {
     margin-left: 5rem;
@@ -1600,7 +1655,7 @@ $breakpoint argument choices:
   .content .card__icons--2 svg {
     grid-column: 1/2;
     margin-right: -22rem;
-    margin-left: 5rem;
+    margin-left: 1rem;
   }
 }
 
@@ -1794,7 +1849,6 @@ $breakpoint argument choices:
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5rem;
 }
 
 @media (max-width: 56.25em) {
@@ -1823,15 +1877,18 @@ $breakpoint argument choices:
 
 .social-media__links--2 {
   margin-top: 2.5rem;
+  margin-left: 4rem;
   fill: #007bb5;
 }
 
 .social-media__links--3 {
   margin-top: 2.5rem;
   fill: #1877f2;
+  margin-left: 4rem;
 }
 
 .social-media__links--4 {
   margin-top: 2.5rem;
+  margin-left: 4rem;
   fill: #1da1f2;
 }
