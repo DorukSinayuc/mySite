@@ -3,6 +3,7 @@
 600px - 900px:       Tablet portrait
 900px - 1200px:      Tablet landscape
 1200px - 1300px:     Small Laptop
+1300px - 1400px:     medium Laptop
 
 1800+ :              Big laptop
 
@@ -27,6 +28,12 @@ $breakpoint argument choices:
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+}
+
+@media (max-width: 87.5em) {
+  html {
+    font-size: 53%;
+  }
 }
 
 @media (max-width: 81.25em) {
@@ -111,6 +118,7 @@ body {
 600px - 900px:       Tablet portrait
 900px - 1200px:      Tablet landscape
 1200px - 1300px:     Small Laptop
+1300px - 1400px:     medium Laptop
 
 1800+ :              Big laptop
 
@@ -147,6 +155,7 @@ $breakpoint argument choices:
 600px - 900px:       Tablet portrait
 900px - 1200px:      Tablet landscape
 1200px - 1300px:     Small Laptop
+1300px - 1400px:     medium Laptop
 
 1800+ :              Big laptop
 
@@ -1293,6 +1302,7 @@ $breakpoint argument choices:
 600px - 900px:       Tablet portrait
 900px - 1200px:      Tablet landscape
 1200px - 1300px:     Small Laptop
+1300px - 1400px:     medium Laptop
 
 1800+ :              Big laptop
 
