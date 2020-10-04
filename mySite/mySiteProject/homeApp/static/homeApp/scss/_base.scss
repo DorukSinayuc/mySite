@@ -15,6 +15,9 @@ html {
 
 
 
+  @include respond(laptop-md) {
+    font-size: 53%; //1rem = 8.48px
+  }
 
   @include respond(laptop-sm) {
     font-size: 53%; //1rem = 8.48px

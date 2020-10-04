@@ -37,8 +37,10 @@
 
   &__container {
     display: grid;
-    grid-template-rows: repeat(6,minmax(min-content, 13.3333vh));
-    grid-template-columns: repeat(24,4.17vw);
+    // grid-template-rows: repeat(6,minmax(min-content, 13.3333vh));
+    // grid-template-columns: repeat(24,4.17vw);
+
+    grid-column: 1/-1;
   }
 
   &__logo {
@@ -46,8 +48,14 @@
     grid-column: 1/-1;
 
     display: grid;
-    grid-template-rows: repeat(12,6.6667vh);
-    grid-template-columns: repeat(24,4.17vw);
+    // grid-template-rows: repeat(12,6.6667vh);
+    // grid-template-columns: repeat(24,4.17vw);
+    grid-template-columns: minmax(10rem,1fr) repeat(5,minmax(20rem,min-content)) minmax(10rem,1fr);
+    grid-template-rows: repeat(2,minmax(20rem,min-content));
+
+    grid-row-gap: 5rem;
+    grid-column-gap: 4rem;
+
 
     &--header-2 {
       grid-row: 1/3;
@@ -97,7 +105,7 @@
 
         margin-top: -1rem;
       }
-    } //header end
+    } //header2 end
 
     &--paragraph {
       grid-row: 3/5;
@@ -256,26 +264,98 @@
 
     } // links end
 
-
-    &:hover &--img:not(:hover)  {
+    // when not hovered how the icons should behave
+    &:hover &--html-css-box:not(:hover)  {
+      opacity: .3;
+    }
+    &:hover &--djangoBox:not(:hover)  {
+      opacity: .3;
+    }
+    &:hover &--mysqlBox:not(:hover)  {
+      opacity: .3;
+    }
+    &:hover &--siemensnxBox:not(:hover)  {
+      opacity: .3;
+    }
+    &:hover &--imageJBox:not(:hover)  {
       opacity: .3;
     }
 
-    &:hover &--img:not(:hover) &--Info {
+    // when hovered how the icons should behave
+    &:hover &--html-css-box:hover  {
+      opacity: 1;
+    }
+    &:hover &--djangoBox:hover  {
+      opacity: 1;
+    }
+    &:hover &--mysqlBox:hover  {
+      opacity: 1;
+    }
+    &:hover &--siemensnxBox:hover  {
+      opacity: 1;
+    }
+    &:hover &--imageJBox:hover  {
+      opacity: 1;
+    }
+
+    // when not hovered how the info boxes should behave
+
+    &:hover &--html-css-box:not(:hover) ~ &--Info-html-css  {
+      // display: none;
+      opacity: 0;
+    }
+    &:hover &--djangoBox:not(:hover) ~ &--Info-django  {
+      // display: none;
+      opacity: 0;
+    }
+    &:hover &--mysqlBox:not(:hover) ~ &--Info-mysql  {
+      // display: none;
+      opacity: 0;
+    }
+    &:hover &--siemensnxBox:not(:hover) ~ &--Info-siemensnx  {
+      // display: none;
+      opacity: 0;
+    }
+    &:hover &--imageJBox:not(:hover) ~ &--Info-ImageJ  {
       // display: none;
       opacity: 0;
     }
 
-    &:hover &--img:hover &--Info {
+    // when hovered how the info boxes should behave
+
+    &:hover &--html-css-box:hover ~ &--Info-html-css  {
+      opacity: 1;
+    }
+    &:hover &--djangoBox:hover ~ &--Info-django  {
+      opacity: 1;
+    }
+    &:hover &--mysqlBox:hover ~ &--Info-mysql  {
+      opacity: 1;
+    }
+    &:hover &--siemensnxBox:hover ~ &--Info-siemensnx  {
+      opacity: 1;
+    }
+    &:hover &--imageJBox:hover ~ &--Info-ImageJ  {
       opacity: 1;
     }
 
+    // when nothing is hovered how they should behave
+
+    // &:not(:hover)   {
+    //   opacity: 1;
+    // }
+
+    // &:not(:hover) &--html-css-box:not(:hover) ~ &--Info-html-css  {
+    //   opacity: 1;
+    // }
+
+
     &--Info {
-      position: absolute;
-      top: 374rem;
-      left: 20.85vw;
+      // position: absolute;
+      // top: 374rem;
+      // left: 20.85vw;
       width: 58.38vw;
-      height: 33.2rem;
+      // height: 33.2rem;
 
       display: grid;
       grid-template-rows: repeat(6,6.6667vh);
@@ -284,32 +364,57 @@
       background-color: white;
       border-radius: 10rem;
       box-shadow: $Education-box-shadow;
-      opacity: 1;
+
+      margin-bottom: 5rem;
+
+      transition: all 1s;
+      // transition-delay: 1s;
+
 
       &-html-css {
         z-index: 10;
+        // transform: translate(25rem,10rem);
+        grid-row: 2/3;
+        grid-column: 2/-2;
+        justify-self: center;
       }
 
       &-django {
         opacity: 0;
         // transition: all .2s;
+        // transform: translate(-17rem,10rem);
+        grid-row: 2/3;
+        grid-column: 2/-2;
+        justify-self: center;
       }
 
       &-mysql {
         opacity: 0;
         // transition: all .2s;
+        // transform: translate(-41rem,10rem);
+        grid-row: 2/3;
+        grid-column: 2/-2;
+        justify-self: center;
       }
 
       &-siemensnx {
         opacity: 0;
         // transition: all .2s;
+        // transform: translate(-65rem,10rem);
+        grid-row: 2/3;
+        grid-column: 2/-2;
+        justify-self: center;
       }
 
       &-ImageJ {
         opacity: 0;
         // transition: all .2s;
+        // transform: translate(-89rem,10rem);
+        grid-row: 2/3;
+        grid-column: 2/-2;
+        justify-self: center;
       }
-    } //Info
+    } //Info end
 
     &--img {
       transition: all 1s;
@@ -318,40 +423,29 @@
     //html-css
 
     &--html-css {
-      grid-row: 1/4;
-      grid-column: 1/7;
-      display: grid;
-      grid-template-rows: repeat(12,6.6667vh);
-      grid-template-columns: repeat(24,4.17vw);
-    }
 
-    &--html {
-      grid-row: 1/4;
-      grid-column: 2/span 3;
-
-      padding: .2rem;
-      // height: 100%;
+      height: 100%;
       width: 100%;
       display: block;
-      object-fit: cover;
-    }
+      object-fit: contain;
 
-    &--css {
-      grid-row: 1/4;
-      grid-column: 5/span 3;
+      &-box {
+        // grid-row: 1/4;
+        // grid-column: 1/7;
 
-      // padding: 2.1rem;
-      // height: 100%;
-      width: 100%;
-      display: block;
-      object-fit: cover;
+        grid-row: 1/2;
+        grid-column: 2/3;
+      }
     }
 
     //django
 
     &--djangoBox {
-      grid-row: 1/4;
-      grid-column: 9/12;
+      // grid-row: 1/4;
+      // grid-column: 7/10;
+
+      grid-row: 1/2;
+      grid-column: 3/4;
     }
 
     &--django {
@@ -370,8 +464,11 @@
     //mysql
 
     &--mysqlBox {
-      grid-row: 1/4;
-      grid-column: 13/16;
+      // grid-row: 1/4;
+      // grid-column: 10/13;
+
+      grid-row: 1/2;
+      grid-column: 4/5;
     }
 
     &--mysql {
@@ -390,8 +487,11 @@
     //siemensnx
 
     &--siemensnxBox {
-      grid-row: 1/4;
-      grid-column: 17/20;
+      // grid-row: 1/4;
+      // grid-column: 13/16;
+
+      grid-row: 1/2;
+      grid-column: 5/6;
     }
 
     &--siemensnx {
@@ -411,6 +511,14 @@
 
     //ImageJBox is written outside of the.software class
 
+    &--imageJBox {
+      // grid-row: 1/4;
+      // grid-column: 16/19;
+
+      grid-row: 1/2;
+      grid-column: 6/7;
+    }
+
     &--Imagej {
       height: 100%;
       width: 100%;
@@ -423,21 +531,6 @@
         opacity: 1;
       }
     }
-  }
+  } // Software__logo end
 
-  &__infoBox {
-    grid-row: 5/11;
-    grid-column: 6/20;
-
-    // margin-top: 4rem;
-    // margin-bottom: 4rem;
-    background-color: white;
-    border-radius: 10rem;
-    box-shadow: $Education-box-shadow;
-  }
 } //Software end
-
-.Software__logo--imageJBox {
-  grid-row: 1/4;
-  grid-column: 21/24;
-}

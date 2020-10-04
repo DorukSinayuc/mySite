@@ -4,6 +4,7 @@
 600px - 900px:       Tablet portrait
 900px - 1200px:      Tablet landscape
 1200px - 1300px:     Small Laptop
+1300px - 1400px:     medium Laptop
 
 1800+ :              Big laptop
 
@@ -13,6 +14,7 @@ $breakpoint argument choices:
 - tab-port
 - tab-land
 - laptop-sm
+-laptop-md
 - laptop-bg
 
 1em = 16px
@@ -34,6 +36,10 @@ $breakpoint argument choices:
 
   @if $breakpoint == laptop-sm {
     @media (max-width: 81.25em) { @content }; //1300px
+  }
+
+  @if $breakpoint == laptop-md {
+    @media (max-width: 87.5em) { @content }; //1400px
   }
 
   @if $breakpoint == laptop-bg {
