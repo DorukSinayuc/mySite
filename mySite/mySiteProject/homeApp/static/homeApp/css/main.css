@@ -13,6 +13,7 @@ $breakpoint argument choices:
 - tab-port
 - tab-land
 - laptop-sm
+-laptop-md
 - laptop-bg
 
 1em = 16px
@@ -128,6 +129,7 @@ $breakpoint argument choices:
 - tab-port
 - tab-land
 - laptop-sm
+-laptop-md
 - laptop-bg
 
 1em = 16px
@@ -165,6 +167,7 @@ $breakpoint argument choices:
 - tab-port
 - tab-land
 - laptop-sm
+-laptop-md
 - laptop-bg
 
 1em = 16px
@@ -189,7 +192,6 @@ $breakpoint argument choices:
 .header-2 {
   font-size: 3rem;
   font-weight: 500;
-  margin-bottom: 1rem;
 }
 
 @media (max-width: 37.5em) {
@@ -244,6 +246,26 @@ $breakpoint argument choices:
   margin-top: .1rem;
 }
 
+/*
+0 - 600px:           Phone
+600px - 900px:       Tablet portrait
+900px - 1200px:      Tablet landscape
+1200px - 1300px:     Small Laptop
+1300px - 1400px:     medium Laptop
+
+1800+ :              Big laptop
+
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- laptop-sm
+-laptop-md
+- laptop-bg
+
+1em = 16px
+*/
 .Education {
   grid-row: 3/4;
   grid-column: 2/24;
@@ -354,6 +376,26 @@ $breakpoint argument choices:
   grid-template-columns: repeat(24, 3.54vw);
 }
 
+/*
+0 - 600px:           Phone
+600px - 900px:       Tablet portrait
+900px - 1200px:      Tablet landscape
+1200px - 1300px:     Small Laptop
+1300px - 1400px:     medium Laptop
+
+1800+ :              Big laptop
+
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- laptop-sm
+-laptop-md
+- laptop-bg
+
+1em = 16px
+*/
 .cv-title {
   grid-column: 1/-1;
   color: #283593;
@@ -383,6 +425,12 @@ $breakpoint argument choices:
   grid-template-rows: minmax(min-content, 45vh);
   background-color: white;
   box-shadow: 0px 0px 19px -3px rgba(0, 0, 0, 0.53);
+}
+
+@media (max-width: 87.5em) {
+  .card-education {
+    grid-template-rows: minmax(45vh, min-content);
+  }
 }
 
 .card-education__icon {
@@ -420,6 +468,13 @@ $breakpoint argument choices:
 
 .card-education__imgRight--gpa-1 {
   color: #B28451;
+  text-align: center;
+}
+
+@media (max-width: 75em) {
+  .card-education__imgRight--gpa-1 {
+    font-size: 1.8rem;
+  }
 }
 
 .card-education__imgRight--gpa-2 {
@@ -430,16 +485,15 @@ $breakpoint argument choices:
   grid-row: 1/-1;
   grid-column: 1/13;
   display: grid;
-  grid-template-rows: repeat(3, min-content);
+  grid-template-rows: repeat(3, minmax(min-content, 40vh));
   grid-template-columns: repeat(12, 4.17vw);
 }
 
 .card-education__infoRight--date {
   grid-row: 1/2;
   grid-column: 1/-1;
-  margin: 2rem 2rem;
+  margin: 0rem 2rem;
   display: flex;
-  gap: 2rem;
   align-items: center;
 }
 
@@ -448,40 +502,46 @@ $breakpoint argument choices:
   color: transparent;
   letter-spacing: .1rem;
   -webkit-background-clip: text;
+  margin-left: 2rem;
 }
 
 .card-education__infoRight--uni {
   grid-row: 2/3;
   grid-column: 1/-1;
-  margin: 0rem 2rem 1rem 2rem;
+  margin: 1rem 2rem 1rem 2rem;
   display: flex;
   flex-direction: column;
 }
 
-.card-education__infoRight--gpaInfo {
+.card-education__infoRight--gpaRow {
   grid-row: 3/4;
-  grid-column: 1/6;
-  margin-top: 2rem;
+  grid-column: 1/-1;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 87.5em) {
+  .card-education__infoRight--gpaRow {
+    margin-bottom: 5rem;
+  }
+}
+
+.card-education__infoRight--gpaInfo {
   margin-left: 2rem;
-  padding: .5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1rem 3rem 1rem 3rem;
   box-shadow: 0px 0px 19px -3px rgba(0, 0, 0, 0.53);
   border-radius: 10rem;
 }
 
 .card-education__infoRight--rightArrow {
-  grid-row: 3/4;
-  grid-column: 6/8;
-  width: 100%;
-  margin-top: 3rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .card-education__infoRight--topOfClass {
-  grid-row: 3/4;
-  grid-column: 8/13;
-  margin-top: 3rem;
   font-weight: 300 !important;
   color: #007bb5;
 }
@@ -558,6 +618,12 @@ $breakpoint argument choices:
   border-radius: 10rem;
 }
 
+@media (max-width: 87.5em) {
+  .card-education__infoLeft--gpaInfo {
+    margin-top: 5rem;
+  }
+}
+
 .card-education__imgRight-2 {
   grid-row: 1/-1;
   grid-column: 13/-1;
@@ -602,6 +668,7 @@ $breakpoint argument choices:
   margin-left: 2rem;
   border-radius: 10rem;
   box-shadow: 0px 0px 19px -3px rgba(0, 0, 0, 0.53);
+  text-align: center;
 }
 
 .card-education__highSchoolInfo--1__rightArrow {
@@ -616,6 +683,7 @@ $breakpoint argument choices:
   font-weight: 300 !important;
   color: #007bb5;
   font-size: 3rem;
+  text-align: center;
 }
 
 .card-education__highSchoolInfo--2 {
@@ -648,6 +716,7 @@ $breakpoint argument choices:
 .card-education__primarySchool--header-3 {
   font-size: 3rem;
   font-weight: 500;
+  text-align: center;
 }
 
 .card-education__primarySchool--header-4 {
@@ -945,16 +1014,17 @@ $breakpoint argument choices:
 
 .Software__container {
   display: grid;
-  grid-template-rows: repeat(6, minmax(min-content, 13.3333vh));
-  grid-template-columns: repeat(24, 4.17vw);
+  grid-column: 1/-1;
 }
 
 .Software__logo {
   grid-row: 1/-1;
   grid-column: 1/-1;
   display: grid;
-  grid-template-rows: repeat(12, 6.6667vh);
-  grid-template-columns: repeat(24, 4.17vw);
+  grid-template-columns: minmax(10rem, 1fr) repeat(5, minmax(20rem, min-content)) minmax(10rem, 1fr);
+  grid-template-rows: repeat(2, minmax(20rem, min-content));
+  grid-row-gap: 5rem;
+  grid-column-gap: 4rem;
 }
 
 .Software__logo--header-2 {
@@ -1145,51 +1215,131 @@ $breakpoint argument choices:
   color: #fff;
 }
 
-.Software__logo:hover .Software__logo--img:not(:hover) {
+.Software__logo:hover .Software__logo--html-css-box:not(:hover) {
   opacity: .3;
 }
 
-.Software__logo:hover .Software__logo--img:not(:hover) .Software__logo--Info {
+.Software__logo:hover .Software__logo--djangoBox:not(:hover) {
+  opacity: .3;
+}
+
+.Software__logo:hover .Software__logo--mysqlBox:not(:hover) {
+  opacity: .3;
+}
+
+.Software__logo:hover .Software__logo--siemensnxBox:not(:hover) {
+  opacity: .3;
+}
+
+.Software__logo:hover .Software__logo--imageJBox:not(:hover) {
+  opacity: .3;
+}
+
+.Software__logo:hover .Software__logo--html-css-box:hover {
+  opacity: 1;
+}
+
+.Software__logo:hover .Software__logo--djangoBox:hover {
+  opacity: 1;
+}
+
+.Software__logo:hover .Software__logo--mysqlBox:hover {
+  opacity: 1;
+}
+
+.Software__logo:hover .Software__logo--siemensnxBox:hover {
+  opacity: 1;
+}
+
+.Software__logo:hover .Software__logo--imageJBox:hover {
+  opacity: 1;
+}
+
+.Software__logo:hover .Software__logo--html-css-box:not(:hover) ~ .Software__logo--Info-html-css {
   opacity: 0;
 }
 
-.Software__logo:hover .Software__logo--img:hover .Software__logo--Info {
+.Software__logo:hover .Software__logo--djangoBox:not(:hover) ~ .Software__logo--Info-django {
+  opacity: 0;
+}
+
+.Software__logo:hover .Software__logo--mysqlBox:not(:hover) ~ .Software__logo--Info-mysql {
+  opacity: 0;
+}
+
+.Software__logo:hover .Software__logo--siemensnxBox:not(:hover) ~ .Software__logo--Info-siemensnx {
+  opacity: 0;
+}
+
+.Software__logo:hover .Software__logo--imageJBox:not(:hover) ~ .Software__logo--Info-ImageJ {
+  opacity: 0;
+}
+
+.Software__logo:hover .Software__logo--html-css-box:hover ~ .Software__logo--Info-html-css {
+  opacity: 1;
+}
+
+.Software__logo:hover .Software__logo--djangoBox:hover ~ .Software__logo--Info-django {
+  opacity: 1;
+}
+
+.Software__logo:hover .Software__logo--mysqlBox:hover ~ .Software__logo--Info-mysql {
+  opacity: 1;
+}
+
+.Software__logo:hover .Software__logo--siemensnxBox:hover ~ .Software__logo--Info-siemensnx {
+  opacity: 1;
+}
+
+.Software__logo:hover .Software__logo--imageJBox:hover ~ .Software__logo--Info-ImageJ {
   opacity: 1;
 }
 
 .Software__logo--Info {
-  position: absolute;
-  top: 374rem;
-  left: 20.85vw;
   width: 58.38vw;
-  height: 33.2rem;
   display: grid;
   grid-template-rows: repeat(6, 6.6667vh);
   grid-template-columns: repeat(14, 4.17vw);
   background-color: white;
   border-radius: 10rem;
   box-shadow: 0px 0px 19px -3px rgba(0, 0, 0, 0.53);
-  opacity: 1;
+  margin-bottom: 5rem;
+  transition: all 1s;
 }
 
 .Software__logo--Info-html-css {
   z-index: 10;
+  grid-row: 2/3;
+  grid-column: 2/-2;
+  justify-self: center;
 }
 
 .Software__logo--Info-django {
   opacity: 0;
+  grid-row: 2/3;
+  grid-column: 2/-2;
+  justify-self: center;
 }
 
 .Software__logo--Info-mysql {
   opacity: 0;
+  grid-row: 2/3;
+  grid-column: 2/-2;
+  justify-self: center;
 }
 
 .Software__logo--Info-siemensnx {
   opacity: 0;
+  grid-row: 2/3;
+  grid-column: 2/-2;
+  justify-self: center;
 }
 
 .Software__logo--Info-ImageJ {
   opacity: 0;
+  grid-row: 2/3;
+  grid-column: 2/-2;
+  justify-self: center;
 }
 
 .Software__logo--img {
@@ -1197,33 +1347,20 @@ $breakpoint argument choices:
 }
 
 .Software__logo--html-css {
-  grid-row: 1/4;
-  grid-column: 1/7;
-  display: grid;
-  grid-template-rows: repeat(12, 6.6667vh);
-  grid-template-columns: repeat(24, 4.17vw);
-}
-
-.Software__logo--html {
-  grid-row: 1/4;
-  grid-column: 2/span 3;
-  padding: .2rem;
+  height: 100%;
   width: 100%;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
 }
 
-.Software__logo--css {
-  grid-row: 1/4;
-  grid-column: 5/span 3;
-  width: 100%;
-  display: block;
-  object-fit: cover;
+.Software__logo--html-css-box {
+  grid-row: 1/2;
+  grid-column: 2/3;
 }
 
 .Software__logo--djangoBox {
-  grid-row: 1/4;
-  grid-column: 9/12;
+  grid-row: 1/2;
+  grid-column: 3/4;
 }
 
 .Software__logo--django {
@@ -1239,8 +1376,8 @@ $breakpoint argument choices:
 }
 
 .Software__logo--mysqlBox {
-  grid-row: 1/4;
-  grid-column: 13/16;
+  grid-row: 1/2;
+  grid-column: 4/5;
 }
 
 .Software__logo--mysql {
@@ -1256,8 +1393,8 @@ $breakpoint argument choices:
 }
 
 .Software__logo--siemensnxBox {
-  grid-row: 1/4;
-  grid-column: 17/20;
+  grid-row: 1/2;
+  grid-column: 5/6;
 }
 
 .Software__logo--siemensnx {
@@ -1272,6 +1409,11 @@ $breakpoint argument choices:
   opacity: 1;
 }
 
+.Software__logo--imageJBox {
+  grid-row: 1/2;
+  grid-column: 6/7;
+}
+
 .Software__logo--Imagej {
   height: 100%;
   width: 100%;
@@ -1282,19 +1424,6 @@ $breakpoint argument choices:
 
 .Software__logo--Imagej:hover {
   opacity: 1;
-}
-
-.Software__infoBox {
-  grid-row: 5/11;
-  grid-column: 6/20;
-  background-color: white;
-  border-radius: 10rem;
-  box-shadow: 0px 0px 19px -3px rgba(0, 0, 0, 0.53);
-}
-
-.Software__logo--imageJBox {
-  grid-row: 1/4;
-  grid-column: 21/24;
 }
 
 /*
@@ -1312,6 +1441,7 @@ $breakpoint argument choices:
 - tab-port
 - tab-land
 - laptop-sm
+-laptop-md
 - laptop-bg
 
 1em = 16px

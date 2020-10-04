@@ -30,14 +30,16 @@
             <h4 class="header-4"><span class="uni__department">Metallurgical and Materials Engineering Department</span></h4>
             <p class="paragraph">Junior (3rd Year) Student</p>
           </div>
-          <div class="card-education__infoRight--gpaInfo">
-            <h3 class="header-3 card-education__imgRight--gpa-1 ">Current C.GPA</h3>
-            <h3 class="header-3 card-education__imgRight--gpa-2">3.65/4.00</h3>
+          <div class="card-education__infoRight--gpaRow">
+            <div class="card-education__infoRight--gpaInfo">
+              <h3 class="header-3 card-education__imgRight--gpa-1 ">Current C.GPA</h3>
+              <h3 class="header-3 card-education__imgRight--gpa-2">3.65/4.00</h3>
+            </div>
+            <svg class="card-education__icon card-education__infoRight--rightArrow">
+              <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-arrow-right2"></use>
+            </svg>
+            <h2 class="header-2 card-education__infoRight--topOfClass">Top of Class</h2>
           </div>
-          <svg class="card-education__icon card-education__infoRight--rightArrow">
-            <use xlink:href="{% static "homeApp/img/sprite.svg" %}#icon-arrow-right2"></use>
-          </svg>
-          <h2 class="header-2 card-education__infoRight--topOfClass">Top of Class</h2>
         </div>
       </div>
     </div>
@@ -205,120 +207,123 @@
   <div class="Software__container">
     <div class="Software__logo">
 
-      <div class="Software__logo--img Software__logo--html-css">
-        <img src="{% static "homeApp/img/html.png" %}" alt="lab pic" class="Software__logo--html">
-        <img src="{% static "homeApp/img/css.png" %}" alt="lab pic" class="Software__logo--css">
-        <div class="Software__logo--Info Software__logo--Info-html-css">
-          <h2 class="Software__logo--header-2">CSS - HTML</h2>
-          <p class="Software__logo--paragraph">
-            Website development was something that always excited me and I decided
-            that it was time to learn. Css and Html are key concepts towards
-            web development therefore I took great care to learn it with diligence.
-            My first encounter with the concepts was when I was taking a Full stackpath
-            web developer bootcamp course. From there I deepened my learning with two
-            additional cources which got me familiar with flex-box and grid that
-            are advanced css concepts.
-          </p>
-          <div class="Software__logo--links">
-            <a href="https://www.udemy.com/course/python-and-django-full-stack-web-developer-bootcamp/" class="Software__logo--links-1">
-              Full Stack Course
-            </a>
-            <a href="https://www.udemy.com/share/101WqoAkIeeFxRQno=/" class="Software__logo--links-2">
-              Beginner CSS course
-            </a>
-            <a href="https://www.udemy.com/share/101WmqAkIeeFxRQno=/" class="Software__logo--links-3">
-              Advanced CSS course
-            </a>
-          </div>
+      <div class="Software__logo--img Software__logo--html-css-box">
+        <img src="{% static "homeApp/img/css-html.png" %}" alt="lab pic" class="Software__logo--html-css">
+        <!-- <img src="{% static "homeApp/img/css.png" %}" alt="lab pic" class="Software__logo--html-css Software__logo--css"> -->
+      </div>
+
+      <div class="Software__logo--Info Software__logo--Info-html-css">
+        <h2 class="Software__logo--header-2">HTML - CSS</h2>
+        <p class="Software__logo--paragraph">
+          Website development was something that always excited me and I decided
+          that it was time to learn. Css and Html are key concepts towards
+          web development therefore I took great care to learn it with diligence.
+          My first encounter with the concepts was when I was taking a Full stackpath
+          web developer bootcamp course. From there I deepened my learning with two
+          additional cources which got me familiar with flex-box and grid that
+          are advanced css concepts.
+        </p>
+        <div class="Software__logo--links">
+          <a href="https://www.udemy.com/course/python-and-django-full-stack-web-developer-bootcamp/" class="Software__logo--links-1">
+            Full Stack Course
+          </a>
+          <a href="https://www.udemy.com/share/101WqoAkIeeFxRQno=/" class="Software__logo--links-2">
+            Beginner CSS course
+          </a>
+          <a href="https://www.udemy.com/share/101WmqAkIeeFxRQno=/" class="Software__logo--links-3">
+            Advanced CSS course
+          </a>
         </div>
       </div>
 
       <div class="Software__logo--img Software__logo--djangoBox">
         <img src="{% static "homeApp/img/django.png" %}" alt="lab pic" class="Software__logo--django">
-        <div class="Software__logo--Info Software__logo--Info-django">
-          <h2 class="Software__logo--header-2 Software__logo--header-2-Django">DJANGO</h2>
-          <p class="Software__logo--paragraph Software__logo--paragraph-Django">
-            Django is a high level python webframework. It is a concept that I have learned as to
-            combine the knowledge I have learned from CSS and HTML to make an fully fledged website.
-            Django is considered as back-end therefore by learning it came the power of authentication,
-            databases, security, mapping of Urls and much more. I learned Django from a 32 hour course on udemy
-            and with it I coded along the making of 2 websites. For my own website I am also using Django
-            and I believe that by mastering it I will be very close to my goal of becoming a full stack
-            web developer.
-          </p>
-          <div class="Software__logo--links-Django">
-            <a href="https://www.udemy.com/course/python-and-django-full-stack-web-developer-bootcamp/" class="Software__logo--links-Django-1">
-              Full Stack Course
-            </a>
-          </div>
+      </div>
+
+      <div class="Software__logo--Info Software__logo--Info-django">
+        <h2 class="Software__logo--header-2 Software__logo--header-2-Django">DJANGO</h2>
+        <p class="Software__logo--paragraph Software__logo--paragraph-Django">
+          Django is a high level python webframework. It is a concept that I have learned as to
+          combine the knowledge I have learned from CSS and HTML to make an fully fledged website.
+          Django is considered as back-end therefore by learning it came the power of authentication,
+          databases, security, mapping of Urls and much more. I learned Django from a 32 hour course on udemy
+          and with it I coded along the making of 2 websites. For my own website I am also using Django
+          and I believe that by mastering it I will be very close to my goal of becoming a full stack
+          web developer.
+        </p>
+        <div class="Software__logo--links-Django">
+          <a href="https://www.udemy.com/course/python-and-django-full-stack-web-developer-bootcamp/" class="Software__logo--links-Django-1">
+            Full Stack Course
+          </a>
         </div>
       </div>
 
       <div class="Software__logo--img Software__logo--mysqlBox">
         <img src="{% static "homeApp/img/mysql.png" %}" alt="lab pic" class="Software__logo--mysql">
-        <div class="Software__logo--Info Software__logo--Info-mysql">
-          <h2 class="Software__logo--header-2 Software__logo--header-2-mysql">MYSQL</h2>
-          <p class="Software__logo--paragraph Software__logo--paragraph-mysql">
-            MySql is a open source Relational Database Management System. I was
-            introduced to mySql from one of my minor classes in industrial engineering.
-            From there I realised how important databases were and got more interested.
-            To further improve myself I started 2 courses on udemy. By the end I was
-            very good at making queries and doing busieness analysis.
-          </p>
-          <div class="Software__logo--links Software__logo--links-mysql">
-            <a href="https://www.udemy.com/share/101qUAAkIeeFxRQno=/" class="Software__logo--links-mysql-1">
-              Beginner MySql Course
-            </a>
-            <a href="https://www.udemy.com/share/1022lgAkIeeFxRQno=/" class="Software__logo--links-mysql-2">
-              Advanced MySql Course
-            </a>
-          </div>
+      </div>
+
+      <div class="Software__logo--Info Software__logo--Info-mysql">
+        <h2 class="Software__logo--header-2 Software__logo--header-2-mysql">MYSQL</h2>
+        <p class="Software__logo--paragraph Software__logo--paragraph-mysql">
+          MySql is a open source Relational Database Management System. I was
+          introduced to mySql from one of my minor classes in industrial engineering.
+          From there I realised how important databases were and got more interested.
+          To further improve myself I started 2 courses on udemy. By the end I was
+          very good at making queries and doing busieness analysis.
+        </p>
+        <div class="Software__logo--links Software__logo--links-mysql">
+          <a href="https://www.udemy.com/share/101qUAAkIeeFxRQno=/" class="Software__logo--links-mysql-1">
+            Beginner MySql Course
+          </a>
+          <a href="https://www.udemy.com/share/1022lgAkIeeFxRQno=/" class="Software__logo--links-mysql-2">
+            Advanced MySql Course
+          </a>
         </div>
       </div>
 
       <div class="Software__logo--img Software__logo--siemensnxBox">
         <img src="{% static "homeApp/img/siemensnx.png" %}" alt="lab pic" class="Software__logo--siemensnx">
-        <div class="Software__logo--Info Software__logo--Info-siemensnx">
-          <h2 class="Software__logo--header-2 Software__logo--header-2-siemensnx">Siemens Nx</h2>
-          <p class="Software__logo--paragraph Software__logo--paragraph-siemensnx">
-            In my first year in university I took a course about this particular program.
-            During the 14 weeks of the semester there were plenty of assignments
-            and midterms for me to make very stable foundation on the software.
-            It is certain that with little work into it I can add to the foundation
-            that I built and use it in anyway necessary.
-          </p>
-          <div class="Software__logo--links Software__logo--links-siemensnx">
-            <a href="#" class="Software__logo--links-siemensnx-1">
-              University Course
-            </a>
-          </div>
+      </div>
+
+      <div class="Software__logo--Info Software__logo--Info-siemensnx">
+        <h2 class="Software__logo--header-2 Software__logo--header-2-siemensnx">Siemens Nx</h2>
+        <p class="Software__logo--paragraph Software__logo--paragraph-siemensnx">
+          In my first year in university I took a course about this particular program.
+          During the 14 weeks of the semester there were plenty of assignments
+          and midterms for me to make very stable foundation on the software.
+          It is certain that with little work into it I can add to the foundation
+          that I built and use it in anyway necessary.
+        </p>
+        <div class="Software__logo--links Software__logo--links-siemensnx">
+          <a href="#" class="Software__logo--links-siemensnx-1">
+            University Course
+          </a>
         </div>
       </div>
 
       <div class="Software__logo--img Software__logo--imageJBox">
         <img src="{% static "homeApp/img/Imagej.png" %}" alt="lab pic" class="Software__logo--Imagej">
-        <div class="Software__logo--Info Software__logo--Info-ImageJ">
-          <h2 class="Software__logo--header-2 Software__logo--header-2-imageJ">ImageJ</h2>
-          <p class="Software__logo--paragraph Software__logo--paragraph-imageJ">
-            I started my undergraduate research under assist. prof. Dr. Simge Çınar
-            in the summer of my first year. We were tasked to make an experiment
-            and from that experiment we needed to analyze the size and shape of the particles
-            that could be seen in the SEM images. To do this we used the image processing program
-            ImageJ.
-          </p>
-          <div class="Software__logo--links Software__logo--links-imageJ">
-            <a href="#" class="Software__logo--links-imageJ-1">
-              Undergraduate Research
-            </a>
-          </div>
+      </div>
+
+      <div class="Software__logo--Info Software__logo--Info-ImageJ">
+        <h2 class="Software__logo--header-2 Software__logo--header-2-imageJ">ImageJ</h2>
+        <p class="Software__logo--paragraph Software__logo--paragraph-imageJ">
+          I started my undergraduate research under assist. prof. Dr. Simge Çınar
+          in the summer of my first year. We were tasked to make an experiment
+          and from that experiment we needed to analyze the size and shape of the particles
+          that could be seen in the SEM images. To do this we used the image processing program
+          ImageJ.
+        </p>
+        <div class="Software__logo--links Software__logo--links-imageJ">
+          <a href="#" class="Software__logo--links-imageJ-1">
+            Undergraduate Research
+          </a>
         </div>
       </div>
 
     </div>
 
-    <!-- <div class="Software__infoBox">
 
-    </div> -->
   </div>
 
 </section>
