@@ -145,7 +145,7 @@
       display: flex;
       align-items: center;
       @include respond(laptop-md) {
-        margin-bottom: 5rem;
+        margin-bottom: 0rem;
       }
     }
 
@@ -269,7 +269,7 @@
       border-radius: 10rem;
 
       @include respond(laptop-md) {
-        margin-top: 5rem;
+        margin-top: 2rem;
       }
     }
   }
@@ -345,7 +345,7 @@
     }
 
     &--2 {
-      margin-top: 3rem;
+      margin-top: 1.2rem;
     }
 
   }

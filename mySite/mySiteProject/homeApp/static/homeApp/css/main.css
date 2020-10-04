@@ -522,7 +522,7 @@ $breakpoint argument choices:
 
 @media (max-width: 87.5em) {
   .card-education__infoRight--gpaRow {
-    margin-bottom: 5rem;
+    margin-bottom: 0rem;
   }
 }
 
@@ -620,7 +620,7 @@ $breakpoint argument choices:
 
 @media (max-width: 87.5em) {
   .card-education__infoLeft--gpaInfo {
-    margin-top: 5rem;
+    margin-top: 2rem;
   }
 }
 
@@ -687,7 +687,7 @@ $breakpoint argument choices:
 }
 
 .card-education__highSchoolInfo--2 {
-  margin-top: 3rem;
+  margin-top: 1.2rem;
 }
 
 .card-education__imgLeft-2 {
