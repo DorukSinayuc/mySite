@@ -41,6 +41,8 @@
     // grid-template-columns: repeat(24,4.17vw);
 
     grid-column: 1/-1;
+
+    overflow: hidden; // delet this later
   }
 
   &__logo {

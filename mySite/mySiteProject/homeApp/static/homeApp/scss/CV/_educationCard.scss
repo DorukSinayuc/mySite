@@ -28,6 +28,17 @@
     padding: 2rem;
     }
 
+    @include respond(tab-port) {
+      span {
+        font-size: 8rem;
+      }
+    }
+
+    @include respond(phone) {
+      span {
+        font-size: 7.5rem;
+      }
+    }
 }
 
 .card-education {
@@ -39,6 +50,10 @@
 
   @include respond(laptop-md) {
     grid-template-rows: minmax(45vh, min-content);
+  }
+
+  @include respond(tab-port) {
+    grid-template-rows: auto;
   }
 
   background-color: white;
@@ -57,6 +72,11 @@
     display: grid;
     grid-template-columns: repeat(22,4.17vw);
     grid-template-rows: repeat(12,3.3333vh);
+
+    @include respond(tab-port) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__imgRight {
@@ -71,6 +91,13 @@
 
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 10% 100%);
 
+    @include respond(tab-port) {
+      clip-path: none;
+      height: 40vh;
+      width: 100%;
+      background-size: cover;
+    }
+
     &--logo {
       grid-row: 1/4;
       grid-column: 20/-1;
@@ -80,6 +107,16 @@
 
       background-image: url('/static/homeApp/img/metu-logo-white.jpg');
       z-index: 1;
+
+      @include respond(tab-port) {
+        clip-path: none;
+        height: 8rem;
+        width: 20rem;
+        background-size: cover;
+
+        position: absolute;
+
+      }
     }
 
     &--gpa {
@@ -109,6 +146,11 @@
     grid-template-rows: repeat(3,minmax(min-content,40vh));
     grid-template-columns: repeat(12,4.17vw);
 
+    @include respond(tab-port) {
+      display: flex;
+      flex-direction: column;
+    }
+
     &--date {
       grid-row: 1/2;
       grid-column: 1/-1;
@@ -116,6 +158,10 @@
 
       display: flex;
       align-items: center;
+
+      @include respond(tab-port) {
+        margin: 3rem 0rem 3rem 3rem;
+      }
 
       h2 {
 
@@ -125,6 +171,11 @@
         -webkit-background-clip: text;
 
         margin-left: 2rem;
+
+        @include respond(tab-port) {
+          font-size: 5rem;
+          margin-bottom: 1rem;
+        }
       }
     }
 
@@ -137,6 +188,20 @@
       display: flex;
       flex-direction: column;
 
+      @include respond(tab-port) {
+        margin: -1rem 2rem 3rem 3rem;
+
+        &-header-3 {
+          font-size: 3rem;
+        }
+        &-header-4 {
+          font-size: 2.5rem;
+        }
+        &-paragraph {
+          font-size: 2.5rem;
+        }
+      }
+
     }
 
     &--gpaRow {
@@ -144,9 +209,23 @@
       grid-column: 1/-1;
       display: flex;
       align-items: center;
+
       @include respond(laptop-md) {
         margin-bottom: 0rem;
       }
+      @include respond(tab-port) {
+        margin: 2rem auto 4rem auto;
+
+        svg {
+          height: 6.5rem;
+          width: 6.5rem;
+        }
+      }
+
+      @include respond(phone) {
+        flex-direction: column;
+      }
+
     }
 
     &--gpaInfo {
@@ -161,6 +240,19 @@
       box-shadow: $Education-box-shadow;
       border-radius: 10rem;
 
+      @include respond(tab-port) {
+        padding: 1rem 4rem 1rem 4rem;
+
+        h3 {
+          font-size: 3rem;
+        }
+      }
+
+      @include respond(phone) {
+        padding: 1rem 7rem 1rem 7rem;
+        margin: 0 auto;
+      }
+
     }
 
     &--rightArrow {
@@ -171,6 +263,15 @@
       margin-left: 2rem;
       margin-right: 2rem;
 
+      @include respond(tab-port) {
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+      }
+
+      @include respond(phone) {
+        display: none;
+      }
+
     }
 
     &--topOfClass {
@@ -179,6 +280,14 @@
       // margin-top: 3rem;
       font-weight: 300 !important;
       color: $color-linkedIn;
+
+      @include respond(tab-port) {
+        font-size: 4rem;
+      }
+
+      @include respond(phone) {
+        margin: 2rem auto;
+      }
     }
 
 
@@ -194,6 +303,11 @@
     display: grid;
     grid-template-columns: repeat(22,4.17vw);
     grid-template-rows: repeat(12,3.3333vh);
+
+    @include respond(tab-port) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__imgLeft {
@@ -217,6 +331,23 @@
 
       background-image: url('/static/homeApp/img/metu-logo-white.jpg');
       z-index: 1;
+
+      @include respond(tab-port) {
+        clip-path: none;
+        height: 8rem;
+        width: 20rem;
+        background-size: cover;
+
+        position: absolute;
+
+      }
+    }
+
+    @include respond(tab-port) {
+      clip-path: none;
+      height: 40vh;
+      width: 100%;
+      background-size: cover;
     }
   } // end of .__imgLeft
 
@@ -227,6 +358,11 @@
     display: grid;
     grid-template-rows: repeat(3,min-content);
     grid-template-columns: repeat(12,4.17vw);
+
+    @include respond(tab-port) {
+      display: flex;
+      flex-direction: column;
+    }
 
     &--date {
       grid-row: 1/2;
@@ -242,6 +378,14 @@
         color: transparent;
         letter-spacing: .1rem;
         -webkit-background-clip: text;
+
+        @include respond(tab-port) {
+          font-size: 5rem;
+        }
+      }
+
+      @include respond(tab-port) {
+        margin: 3rem 0rem 3rem 3rem;
       }
     }
 
@@ -271,6 +415,16 @@
       @include respond(laptop-md) {
         margin-top: 2rem;
       }
+      @include respond(tab-port) {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1rem 18rem 1rem 18rem;
+        margin-bottom: 4.2rem;
+
+        h3 {
+          font-size: 3rem;
+        }
+      }
     }
   }
 
@@ -287,6 +441,13 @@
     opacity: 0.9;
 
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 10% 100%);
+
+    @include respond(tab-port) {
+      clip-path: none;
+      height: 40vh;
+      width: 100%;
+      background-size: cover;
+    }
   }
 
   &__infoRight2--topOfClass {
@@ -296,7 +457,6 @@
   &__infoRight--gpaInfo2 {
     grid-row: 4/5;
     grid-column: 1/6;
-
   }
 
   .card-education__infoRight--date__highschool {
@@ -326,6 +486,23 @@
         box-shadow: $Education-box-shadow;
         text-align: center;
 
+        @include respond(tab-port) {
+          padding: 1rem 4rem 1rem 4rem;
+
+          h3 {
+            font-size: 3rem;
+          }
+        }
+
+        @include respond(phone) {
+          box-shadow: none;
+          padding: 0;
+          border-radius: 0;
+
+          h3 {
+            font-size: 3rem;
+          }
+        }
       }
 
       &__rightArrow {
@@ -333,6 +510,10 @@
         width: 5rem;
         fill: $primary-color-gold;
         margin-left: 3rem;
+
+        @include respond(phone) {
+          display: none;
+        }
       }
 
       &__topOfClass {
@@ -341,11 +522,40 @@
         color: $color-linkedIn;
         font-size: 3rem;
         text-align: center;
+
+      }
+
+      @include respond(tab-port) {
+        margin-bottom: 3rem;
+        margin-left: auto;
+        margin-right: auto;
+
+        h2 {
+          font-size: 4rem;
+        }
+      }
+
+      @include respond(phone) {
+        background-color: white;
+        border-radius: 5rem;
+        box-shadow: $Education-box-shadow;
+        padding: 1rem 3rem 1rem 3rem;
+        margin: 2rem auto;
+
+        h2 {
+          font-size: 3.5rem;
+        }
       }
     }
 
     &--2 {
       margin-top: 1.2rem;
+
+      @include respond(tab-port) {
+        margin-bottom: 4.2rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
 
   }
@@ -363,6 +573,13 @@
     opacity: 0.9;
 
     clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+
+    @include respond(tab-port) {
+      clip-path: none;
+      height: 40vh;
+      width: 100%;
+      background-size: cover;
+    }
   }
 
   &__primarySchool {
@@ -382,19 +599,37 @@
 
     box-shadow: $Education-box-shadow;
 
+    @include respond(tab-port) {
+      margin: 0 auto;
+      padding: 2rem 6rem 2rem 6rem;
+
+      margin-bottom: 4.2rem;
+    }
+
     &--header-3 {
       font-size: 3rem;
       font-weight: 500;
       text-align: center;
+
+      @include respond(tab-port) {
+        font-size: 4rem;
+      }
     }
 
     &--header-4 {
       font-size: 2.5rem;
+
+      @include respond(tab-port) {
+        font-size: 3.5rem;
+      }
     }
 
     &--paragraph {
       font-size: 2.5rem;
       font-weight: 700;
+      @include respond(tab-port) {
+        font-size: 3.5rem;
+      }
     }
   }
 
