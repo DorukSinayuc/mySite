@@ -782,7 +782,6 @@ $breakpoint argument choices:
   grid-column: 1/-1;
   margin: 2rem 4rem;
   display: flex;
-  gap: 2rem;
   align-items: center;
 }
 
@@ -791,11 +790,18 @@ $breakpoint argument choices:
   color: transparent;
   letter-spacing: .1rem;
   -webkit-background-clip: text;
+  margin-left: 2rem;
 }
 
 @media (max-width: 56.25em) {
   .card-education__infoLeft--date h2 {
     font-size: 5rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .card-education__infoLeft--date h2 {
+    margin-bottom: 1rem;
   }
 }
 
@@ -841,6 +847,12 @@ $breakpoint argument choices:
   }
   .card-education__infoLeft--gpaInfo h3 {
     font-size: 3rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .card-education__infoLeft--gpaInfo {
+    padding: 1rem 7rem 1rem 7rem;
   }
 }
 
