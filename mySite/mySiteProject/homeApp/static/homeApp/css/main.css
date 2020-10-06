@@ -330,7 +330,7 @@ $breakpoint argument choices:
   grid-column: 1/-1;
   display: grid;
   grid-template-columns: repeat(24, 4.17vw);
-  grid-template-rows: repeat(24, 4.17vh);
+  grid-template-rows: repeat(2, min-content);
   background-image: url("/static/homeApp/img/languages-3.jpg");
   background-size: cover;
   background-position: center;
@@ -344,6 +344,7 @@ $breakpoint argument choices:
   display: grid;
   grid-template-columns: repeat(24, 4.17vw);
   grid-template-rows: repeat(2, min-content);
+  padding-bottom: 4rem;
 }
 
 .Footer {
@@ -1466,6 +1467,21 @@ $breakpoint argument choices:
   padding: 2rem;
 }
 
+@media (max-width: 56.25em) {
+  .Languages__overlay--cv-title span {
+    font-size: 8rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .Languages__overlay--cv-title {
+    grid-template-columns: max-content 1fr;
+  }
+  .Languages__overlay--cv-title span {
+    font-size: 7rem;
+  }
+}
+
 .Languages__overlay--cards {
   grid-row: 2/3;
   grid-column: 1/-1;
@@ -1475,6 +1491,14 @@ $breakpoint argument choices:
   margin-top: 6rem;
 }
 
+@media (max-width: 56.25em) {
+  .Languages__overlay--cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .Languages__overlay--cards-1 {
   grid-column: 2/span 4;
   background-color: rgba(246, 228, 192, 0.8);
@@ -1482,6 +1506,22 @@ $breakpoint argument choices:
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
+}
+
+@media (max-width: 56.25em) {
+  .Languages__overlay--cards-1 {
+    margin-bottom: 3rem;
+    width: 50%;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .Languages__overlay--cards-1 {
+    margin-bottom: 3rem;
+    width: 80%;
+    padding: 1.5rem;
+  }
 }
 
 .Languages__overlay--cards-2 {
@@ -1491,6 +1531,22 @@ $breakpoint argument choices:
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
+}
+
+@media (max-width: 56.25em) {
+  .Languages__overlay--cards-2 {
+    margin-bottom: 3rem;
+    width: 50%;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .Languages__overlay--cards-2 {
+    margin-bottom: 3rem;
+    width: 80%;
+    padding: 1.5rem;
+  }
 }
 
 .Languages__overlay--cards-3 {
@@ -1500,14 +1556,44 @@ $breakpoint argument choices:
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
+}
+
+@media (max-width: 56.25em) {
+  .Languages__overlay--cards-3 {
+    margin-bottom: 3rem;
+    width: 50%;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .Languages__overlay--cards-3 {
+    margin-bottom: 3rem;
+    width: 80%;
+    padding: 1.5rem;
+  }
 }
 
 .Languages__overlay--icon {
   margin-top: 2rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 75em) {
+  .Languages__overlay--icon {
+    width: 79%;
+  }
 }
 
 .Languages__overlay--icon-Russia {
   margin-top: 2rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 75em) {
+  .Languages__overlay--icon-Russia {
+    width: 79%;
+  }
 }
 
 .Languages__overlay--header-2 {
@@ -1519,11 +1605,23 @@ $breakpoint argument choices:
   border-bottom: 2px solid brown;
 }
 
+@media (max-width: 56.25em) {
+  .Languages__overlay--header-2 {
+    font-size: 6rem;
+  }
+}
+
 .Languages__overlay--header-3 {
   margin-top: 2rem;
   font-size: 2rem;
   font-weight: 500;
   color: #B28451;
+}
+
+@media (max-width: 56.25em) {
+  .Languages__overlay--header-3 {
+    font-size: 3.5rem;
+  }
 }
 
 .Languages__overlay--paragraph {
@@ -1532,6 +1630,12 @@ $breakpoint argument choices:
   padding: 2rem;
   text-align: center;
   color: #8d6e63;
+}
+
+@media (max-width: 56.25em) {
+  .Languages__overlay--paragraph {
+    font-size: 2rem;
+  }
 }
 
 .Software__cv-title {
@@ -1558,6 +1662,21 @@ $breakpoint argument choices:
 .Software__cv-title .title-style {
   border: .3rem solid #37474f;
   padding: 2rem;
+}
+
+@media (max-width: 56.25em) {
+  .Software__cv-title span {
+    font-size: 8rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .Software__cv-title {
+    grid-template-columns: max-content 1fr;
+  }
+  .Software__cv-title span {
+    font-size: 7.5rem;
+  }
 }
 
 .Software__container {

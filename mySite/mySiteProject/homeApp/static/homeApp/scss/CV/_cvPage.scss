@@ -72,13 +72,14 @@
 
   display: grid;
   grid-template-columns: repeat(24,4.17vw);
-  grid-template-rows: repeat(24,4.17vh);
+  grid-template-rows: repeat(2,min-content);
 
   background-image: url('/static/homeApp/img/languages-3.jpg');
   background-size: cover;
   background-position: center;
 
   overflow: hidden;
+
 
   // height: 100vh;
 
@@ -90,6 +91,8 @@
     display: grid;
     grid-template-columns: repeat(24,4.17vw);
     grid-template-rows: repeat(2,min-content);
+
+    padding-bottom: 4rem;
   }
 }
 
