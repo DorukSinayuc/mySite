@@ -2154,6 +2154,12 @@ $breakpoint argument choices:
   object-fit: contain;
 }
 
+@media (max-width: 37.5em) {
+  .Software__logo--html-css {
+    margin-bottom: 3rem;
+  }
+}
+
 .Software__logo--html-css-box {
   grid-row: 1/2;
   grid-column: 2/3;
@@ -2179,8 +2185,8 @@ $breakpoint argument choices:
 @media (max-width: 37.5em) {
   .Software__logo--django {
     opacity: 1;
-    margin-top: -10rem;
-    margin-bottom: -6rem;
+    margin-top: -8rem;
+    margin-bottom: -4rem;
   }
 }
 

@@ -603,6 +603,9 @@
       display: block;
       object-fit: contain;
 
+      @include respond(phone) {
+        margin-bottom: 3rem;
+      }
       &-box {
         // grid-row: 1/4;
         // grid-column: 1/7;
@@ -636,8 +639,8 @@
 
       @include respond(phone) {
         opacity: 1;
-        margin-top: -10rem;
-        margin-bottom: -6rem;
+        margin-top: -8rem;
+        margin-bottom: -4rem;
       }
     }
 
