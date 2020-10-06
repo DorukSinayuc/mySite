@@ -2179,8 +2179,8 @@ $breakpoint argument choices:
 @media (max-width: 37.5em) {
   .Software__logo--django {
     opacity: 1;
-    margin-top: -15rem;
-    margin-bottom: -10rem;
+    margin-top: -10rem;
+    margin-bottom: -6rem;
   }
 }
 
@@ -2204,7 +2204,8 @@ $breakpoint argument choices:
 @media (max-width: 37.5em) {
   .Software__logo--mysql {
     opacity: 1;
-    margin-top: -6rem;
+    margin-top: -3rem;
+    margin-bottom: 3rem;
   }
 }
 
@@ -2228,7 +2229,8 @@ $breakpoint argument choices:
 @media (max-width: 37.5em) {
   .Software__logo--siemensnx {
     opacity: 1;
-    margin-top: -4rem;
+    margin-top: -2rem;
+    margin-bottom: 3rem;
   }
 }
 
@@ -2252,7 +2254,8 @@ $breakpoint argument choices:
 @media (max-width: 37.5em) {
   .Software__logo--Imagej {
     opacity: 1;
-    margin-top: -4rem;
+    margin-top: -2rem;
+    margin-bottom: 3rem;
   }
 }
 

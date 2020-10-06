@@ -636,8 +636,8 @@
 
       @include respond(phone) {
         opacity: 1;
-        margin-top: -15rem;
-        margin-bottom: -10rem;
+        margin-top: -10rem;
+        margin-bottom: -6rem;
       }
     }
 
@@ -664,7 +664,8 @@
       }
       @include respond(phone) {
         opacity: 1;
-        margin-top: -6rem;
+        margin-top: -3rem;
+        margin-bottom: 3rem;
       }
     }
 
@@ -691,7 +692,8 @@
       }
       @include respond(phone) {
         opacity: 1;
-        margin-top: -4rem;
+        margin-top: -2rem;
+        margin-bottom: 3rem;
       }
     }
 
@@ -718,7 +720,8 @@
       }
       @include respond(phone) {
         opacity: 1;
-        margin-top: -4rem;
+        margin-top: -2rem;
+        margin-bottom: 3rem;
       }
     }
   } // Software__logo end
