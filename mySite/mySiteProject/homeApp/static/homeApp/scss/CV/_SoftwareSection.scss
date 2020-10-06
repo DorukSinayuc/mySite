@@ -52,11 +52,24 @@
     display: grid;
     // grid-template-rows: repeat(12,6.6667vh);
     // grid-template-columns: repeat(24,4.17vw);
-    grid-template-columns: minmax(10rem,1fr) repeat(5,minmax(20rem,min-content)) minmax(10rem,1fr);
+    // grid-template-columns: minmax(10rem,1fr) repeat(5,minmax(20rem,min-content)) minmax(10rem,1fr);
+    grid-template-columns: 1fr repeat(5,minmax(20rem,min-content)) 1fr;
     grid-template-rows: repeat(2,minmax(20rem,min-content));
 
     grid-row-gap: 5rem;
     grid-column-gap: 4rem;
+
+    @include respond(laptop-sm) {
+      grid-template-columns: 1fr repeat(5,minmax(18rem,min-content)) 1fr;
+    }
+    @include respond(tab-port) {
+      grid-template-columns: 1fr repeat(5,minmax(12rem,min-content)) 1fr;
+    }
+    @include respond(phone) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
 
     &--header-2 {
@@ -72,6 +85,17 @@
       letter-spacing: .1rem;
       -webkit-background-clip: text;
 
+      @include respond(tab-land) {
+        margin-top: -2rem;
+      }
+      @include respond(tab-port) {
+        grid-column: 1/-1;
+      }
+      @include respond(phone) {
+        margin-bottom: 2.5rem;
+        font-size: 5rem;
+      }
+
       &-Django {
         background-image: linear-gradient(to right,#00796b,#00695c,#004d40);
         color: transparent;
@@ -79,6 +103,11 @@
         -webkit-background-clip: text;
 
         margin-top: -1rem;
+
+        @include respond(tab-land) {
+          margin-top: -2rem;
+        }
+
       }
 
       &-mysql {
@@ -119,6 +148,16 @@
       align-self: center;
 
       margin-top: -1.5rem;
+
+      @include respond(tab-port) {
+        grid-column: 1/-1;
+        padding: 0 4rem;
+      }
+      @include respond(phone) {
+        margin-bottom: 2.5rem;
+        font-size: 2.5rem;
+        padding: 1rem;
+      }
     }
 
     &--links {
@@ -128,6 +167,15 @@
 
       align-items: center;
       justify-content: space-between;
+
+      @include respond(tab-port) {
+        grid-column: 1/-1;
+        padding: 0 1.6rem;
+        justify-content: space-around;
+      }
+      @include respond(phone) {
+        flex-direction: column;
+      }
 
       &-1:link,
       &-1:visited {
@@ -142,6 +190,14 @@
         cursor: pointer;
         background-color: #f16529;
         color: #fff;
+
+        @include respond(tab-land) {
+          font-size: 1.2rem;
+        }
+        @include respond(phone) {
+          font-size: 2rem;
+          padding: 2.5rem 4rem;
+        }
       }
 
       &-2:link,
@@ -157,6 +213,14 @@
         cursor: pointer;
         background-color: #0277bd;
         color: #fff;
+
+        @include respond(tab-land) {
+          font-size: 1.2rem;
+        }
+        @include respond(phone) {
+          font-size: 2rem;
+          padding: 2.5rem 4rem;
+        }
       }
 
       &-3:link,
@@ -172,6 +236,14 @@
         cursor: pointer;
         background-color: #039be5;
         color: #fff;
+
+        @include respond(tab-land) {
+          font-size: 1.2rem;
+        }
+        @include respond(phone) {
+          font-size: 2rem;
+          padding: 2.5rem 4rem;
+        }
       }
 
       &-Django {
@@ -182,6 +254,10 @@
         align-items: center;
         justify-content: center;
         margin-top: 2rem;
+        @include respond(tab-port) {
+          grid-column: 1/-1;
+          padding: 0 1.6rem;
+        }
 
         &-1 {
           text-transform: uppercase;
@@ -195,11 +271,20 @@
           cursor: pointer;
           background-color: #00796b;
           color: #fff;
+
+          @include respond(phone) {
+            font-size: 2rem;
+            padding: 2.5rem 4rem;
+          }
         }
       }
 
       &-mysql {
         justify-content: space-around;
+        @include respond(tab-port) {
+          grid-column: 1/-1;
+          padding: 0 1.6rem;
+        }
 
         &-1 {
           text-transform: uppercase;
@@ -213,6 +298,10 @@
           cursor: pointer;
           background-color: #00758f;
           color: #fff;
+          @include respond(phone) {
+            font-size: 2rem;
+            padding: 2.5rem 4rem;
+          }
         }
         &-2 {
           text-transform: uppercase;
@@ -226,11 +315,19 @@
           cursor: pointer;
           background-color: #f29111;
           color: #fff;
+          @include respond(phone) {
+            font-size: 2rem;
+            padding: 2.5rem 4rem;
+          }
         }
       }
 
       &-siemensnx {
         justify-content: center;
+        @include respond(tab-port) {
+          grid-column: 1/-1;
+          padding: 0 1.6rem;
+        }
         &-1 {
           text-transform: uppercase;
           text-decoration: none;
@@ -243,11 +340,19 @@
           cursor: pointer;
           background-color: #00abad;
           color: #fff;
+          @include respond(phone) {
+            font-size: 2rem;
+            padding: 2.5rem 4rem;
+          }
         }
       }
 
       &-imageJ {
         justify-content: center;
+        @include respond(tab-port) {
+          grid-column: 1/-1;
+          padding: 0 1.6rem;
+        }
         &-1 {
           text-transform: uppercase;
           text-decoration: none;
@@ -260,85 +365,91 @@
           cursor: pointer;
           background-color: #212122;
           color: #fff;
+          @include respond(phone) {
+            font-size: 2rem;
+            padding: 2.5rem 4rem;
+          }
         }
       }
 
 
     } // links end
 
-    // when not hovered how the icons should behave
-    &:hover &--html-css-box:not(:hover)  {
-      opacity: .3;
-    }
-    &:hover &--djangoBox:not(:hover)  {
-      opacity: .3;
-    }
-    &:hover &--mysqlBox:not(:hover)  {
-      opacity: .3;
-    }
-    &:hover &--siemensnxBox:not(:hover)  {
-      opacity: .3;
-    }
-    &:hover &--imageJBox:not(:hover)  {
-      opacity: .3;
-    }
+    @include respond(not_phone) {
+      // when not hovered how the icons should behave
+      &:hover &--html-css-box:not(:hover)  {
+        opacity: .3;
+      }
+      &:hover &--djangoBox:not(:hover)  {
+        opacity: .3;
+      }
+      &:hover &--mysqlBox:not(:hover)  {
+        opacity: .3;
+      }
+      &:hover &--siemensnxBox:not(:hover)  {
+        opacity: .3;
+      }
+      &:hover &--imageJBox:not(:hover)  {
+        opacity: .3;
+      }
 
-    // when hovered how the icons should behave
-    &:hover &--html-css-box:hover  {
-      opacity: 1;
-    }
-    &:hover &--djangoBox:hover  {
-      opacity: 1;
-    }
-    &:hover &--mysqlBox:hover  {
-      opacity: 1;
-    }
-    &:hover &--siemensnxBox:hover  {
-      opacity: 1;
-    }
-    &:hover &--imageJBox:hover  {
-      opacity: 1;
-    }
+      // when hovered how the icons should behave
+      &:hover &--html-css-box:hover  {
+        opacity: 1;
+      }
+      &:hover &--djangoBox:hover  {
+        opacity: 1;
+      }
+      &:hover &--mysqlBox:hover  {
+        opacity: 1;
+      }
+      &:hover &--siemensnxBox:hover  {
+        opacity: 1;
+      }
+      &:hover &--imageJBox:hover  {
+        opacity: 1;
+      }
 
-    // when not hovered how the info boxes should behave
+      // when not hovered how the info boxes should behave
 
-    &:hover &--html-css-box:not(:hover) ~ &--Info-html-css  {
-      // display: none;
-      opacity: 0;
-    }
-    &:hover &--djangoBox:not(:hover) ~ &--Info-django  {
-      // display: none;
-      opacity: 0;
-    }
-    &:hover &--mysqlBox:not(:hover) ~ &--Info-mysql  {
-      // display: none;
-      opacity: 0;
-    }
-    &:hover &--siemensnxBox:not(:hover) ~ &--Info-siemensnx  {
-      // display: none;
-      opacity: 0;
-    }
-    &:hover &--imageJBox:not(:hover) ~ &--Info-ImageJ  {
-      // display: none;
-      opacity: 0;
-    }
+      &:hover &--html-css-box:not(:hover) ~ &--Info-html-css  {
+        // display: none;
+        opacity: 0;
+      }
+      &:hover &--djangoBox:not(:hover) ~ &--Info-django  {
+        // display: none;
+        opacity: 0;
+      }
+      &:hover &--mysqlBox:not(:hover) ~ &--Info-mysql  {
+        // display: none;
+        opacity: 0;
+      }
+      &:hover &--siemensnxBox:not(:hover) ~ &--Info-siemensnx  {
+        // display: none;
+        opacity: 0;
+      }
+      &:hover &--imageJBox:not(:hover) ~ &--Info-ImageJ  {
+        // display: none;
+        opacity: 0;
+      }
 
-    // when hovered how the info boxes should behave
+      // when hovered how the info boxes should behave
 
-    &:hover &--html-css-box:hover ~ &--Info-html-css  {
-      opacity: 1;
-    }
-    &:hover &--djangoBox:hover ~ &--Info-django  {
-      opacity: 1;
-    }
-    &:hover &--mysqlBox:hover ~ &--Info-mysql  {
-      opacity: 1;
-    }
-    &:hover &--siemensnxBox:hover ~ &--Info-siemensnx  {
-      opacity: 1;
-    }
-    &:hover &--imageJBox:hover ~ &--Info-ImageJ  {
-      opacity: 1;
+      &:hover &--html-css-box:hover ~ &--Info-html-css  {
+        opacity: 1;
+      }
+      &:hover &--djangoBox:hover ~ &--Info-django  {
+        opacity: 1;
+      }
+      &:hover &--mysqlBox:hover ~ &--Info-mysql  {
+        opacity: 1;
+      }
+      &:hover &--siemensnxBox:hover ~ &--Info-siemensnx  {
+        opacity: 1;
+      }
+      &:hover &--imageJBox:hover ~ &--Info-ImageJ  {
+        opacity: 1;
+      }
     }
 
     // when nothing is hovered how they should behave
@@ -372,6 +483,19 @@
       transition: all 1s;
       // transition-delay: 1s;
 
+      @include respond(tab-port) {
+        width: 72vw;
+        grid-template-columns: repeat(6,12vw);
+      }
+      @include respond(phone) {
+        width: 96vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 4rem 4rem;
+        box-shadow: none;
+
+      }
 
       &-html-css {
         z-index: 10;
@@ -379,6 +503,14 @@
         grid-row: 2/3;
         grid-column: 2/-2;
         justify-self: center;
+        border: 3px solid #0277bd;
+
+        @include respond(tab-port) {
+          grid-column: 1/-1;
+        }
+        @include respond(phone) {
+          border: 3px solid #0277bd;
+        }
       }
 
       &-django {
@@ -388,6 +520,15 @@
         grid-row: 2/3;
         grid-column: 2/-2;
         justify-self: center;
+        border: 3px solid #00695c;
+
+        @include respond(tab-port) {
+          grid-column: 1/-1;
+        }
+        @include respond(phone) {
+          opacity: 1;
+          border: 3px solid #00695c;
+        }
       }
 
       &-mysql {
@@ -397,6 +538,15 @@
         grid-row: 2/3;
         grid-column: 2/-2;
         justify-self: center;
+        border: 3px solid #00758f;
+
+        @include respond(tab-port) {
+          grid-column: 1/-1;
+        }
+        @include respond(phone) {
+          opacity: 1;
+          border: 3px solid #00758f;
+        }
       }
 
       &-siemensnx {
@@ -406,6 +556,15 @@
         grid-row: 2/3;
         grid-column: 2/-2;
         justify-self: center;
+        border: 3px solid #b8202d;
+
+        @include respond(tab-port) {
+          grid-column: 1/-1;
+        }
+        @include respond(phone) {
+          opacity: 1;
+          border: 3px solid #b8202d;
+        }
       }
 
       &-ImageJ {
@@ -415,11 +574,24 @@
         grid-row: 2/3;
         grid-column: 2/-2;
         justify-self: center;
+        border: 3px solid #000;
+
+        @include respond(tab-port) {
+          grid-column: 1/-1;
+        }
+        @include respond(phone) {
+          opacity: 1;
+          border: 3px solid #000;
+        }
       }
     } //Info end
 
     &--img {
       transition: all 1s;
+
+      @include respond(phone) {
+        width: 50%;
+      }
     }
 
     //html-css
@@ -461,6 +633,12 @@
       &:hover {
         opacity: 1;
       }
+
+      @include respond(phone) {
+        opacity: 1;
+        margin-top: -15rem;
+        margin-bottom: -10rem;
+      }
     }
 
     //mysql
@@ -483,6 +661,10 @@
 
       &:hover {
         opacity: 1;
+      }
+      @include respond(phone) {
+        opacity: 1;
+        margin-top: -6rem;
       }
     }
 
@@ -507,11 +689,13 @@
       &:hover {
         opacity: 1;
       }
+      @include respond(phone) {
+        opacity: 1;
+        margin-top: -4rem;
+      }
     }
 
     //ImageJ
-
-    //ImageJBox is written outside of the.software class
 
     &--imageJBox {
       // grid-row: 1/4;
@@ -531,6 +715,10 @@
 
       &:hover {
         opacity: 1;
+      }
+      @include respond(phone) {
+        opacity: 1;
+        margin-top: -4rem;
       }
     }
   } // Software__logo end

@@ -1570,10 +1570,30 @@ $breakpoint argument choices:
   grid-row: 1/-1;
   grid-column: 1/-1;
   display: grid;
-  grid-template-columns: minmax(10rem, 1fr) repeat(5, minmax(20rem, min-content)) minmax(10rem, 1fr);
+  grid-template-columns: 1fr repeat(5, minmax(20rem, min-content)) 1fr;
   grid-template-rows: repeat(2, minmax(20rem, min-content));
   grid-row-gap: 5rem;
   grid-column-gap: 4rem;
+}
+
+@media (max-width: 81.25em) {
+  .Software__logo {
+    grid-template-columns: 1fr repeat(5, minmax(18rem, min-content)) 1fr;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .Software__logo {
+    grid-template-columns: 1fr repeat(5, minmax(12rem, min-content)) 1fr;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .Software__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .Software__logo--header-2 {
@@ -1589,12 +1609,37 @@ $breakpoint argument choices:
   -webkit-background-clip: text;
 }
 
+@media (max-width: 75em) {
+  .Software__logo--header-2 {
+    margin-top: -2rem;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .Software__logo--header-2 {
+    grid-column: 1/-1;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .Software__logo--header-2 {
+    margin-bottom: 2.5rem;
+    font-size: 5rem;
+  }
+}
+
 .Software__logo--header-2-Django {
   background-image: linear-gradient(to right, #00796b, #00695c, #004d40);
   color: transparent;
   letter-spacing: .1rem;
   -webkit-background-clip: text;
   margin-top: -1rem;
+}
+
+@media (max-width: 75em) {
+  .Software__logo--header-2-Django {
+    margin-top: -2rem;
+  }
 }
 
 .Software__logo--header-2-mysql {
@@ -1631,12 +1676,41 @@ $breakpoint argument choices:
   margin-top: -1.5rem;
 }
 
+@media (max-width: 56.25em) {
+  .Software__logo--paragraph {
+    grid-column: 1/-1;
+    padding: 0 4rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .Software__logo--paragraph {
+    margin-bottom: 2.5rem;
+    font-size: 2.5rem;
+    padding: 1rem;
+  }
+}
+
 .Software__logo--links {
   grid-row: 5/7;
   grid-column: 2/14;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+@media (max-width: 56.25em) {
+  .Software__logo--links {
+    grid-column: 1/-1;
+    padding: 0 1.6rem;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .Software__logo--links {
+    flex-direction: column;
+  }
 }
 
 .Software__logo--links-1:link, .Software__logo--links-1:visited {
@@ -1652,6 +1726,19 @@ $breakpoint argument choices:
   color: #fff;
 }
 
+@media (max-width: 75em) {
+  .Software__logo--links-1:link, .Software__logo--links-1:visited {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .Software__logo--links-1:link, .Software__logo--links-1:visited {
+    font-size: 2rem;
+    padding: 2.5rem 4rem;
+  }
+}
+
 .Software__logo--links-2:link, .Software__logo--links-2:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -1663,6 +1750,19 @@ $breakpoint argument choices:
   cursor: pointer;
   background-color: #0277bd;
   color: #fff;
+}
+
+@media (max-width: 75em) {
+  .Software__logo--links-2:link, .Software__logo--links-2:visited {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .Software__logo--links-2:link, .Software__logo--links-2:visited {
+    font-size: 2rem;
+    padding: 2.5rem 4rem;
+  }
 }
 
 .Software__logo--links-3:link, .Software__logo--links-3:visited {
@@ -1678,6 +1778,19 @@ $breakpoint argument choices:
   color: #fff;
 }
 
+@media (max-width: 75em) {
+  .Software__logo--links-3:link, .Software__logo--links-3:visited {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .Software__logo--links-3:link, .Software__logo--links-3:visited {
+    font-size: 2rem;
+    padding: 2.5rem 4rem;
+  }
+}
+
 .Software__logo--links-Django {
   grid-row: 5/7;
   grid-column: 2/14;
@@ -1685,6 +1798,13 @@ $breakpoint argument choices:
   align-items: center;
   justify-content: center;
   margin-top: 2rem;
+}
+
+@media (max-width: 56.25em) {
+  .Software__logo--links-Django {
+    grid-column: 1/-1;
+    padding: 0 1.6rem;
+  }
 }
 
 .Software__logo--links-Django-1 {
@@ -1700,8 +1820,22 @@ $breakpoint argument choices:
   color: #fff;
 }
 
+@media (max-width: 37.5em) {
+  .Software__logo--links-Django-1 {
+    font-size: 2rem;
+    padding: 2.5rem 4rem;
+  }
+}
+
 .Software__logo--links-mysql {
   justify-content: space-around;
+}
+
+@media (max-width: 56.25em) {
+  .Software__logo--links-mysql {
+    grid-column: 1/-1;
+    padding: 0 1.6rem;
+  }
 }
 
 .Software__logo--links-mysql-1 {
@@ -1717,6 +1851,13 @@ $breakpoint argument choices:
   color: #fff;
 }
 
+@media (max-width: 37.5em) {
+  .Software__logo--links-mysql-1 {
+    font-size: 2rem;
+    padding: 2.5rem 4rem;
+  }
+}
+
 .Software__logo--links-mysql-2 {
   text-transform: uppercase;
   text-decoration: none;
@@ -1730,8 +1871,22 @@ $breakpoint argument choices:
   color: #fff;
 }
 
+@media (max-width: 37.5em) {
+  .Software__logo--links-mysql-2 {
+    font-size: 2rem;
+    padding: 2.5rem 4rem;
+  }
+}
+
 .Software__logo--links-siemensnx {
   justify-content: center;
+}
+
+@media (max-width: 56.25em) {
+  .Software__logo--links-siemensnx {
+    grid-column: 1/-1;
+    padding: 0 1.6rem;
+  }
 }
 
 .Software__logo--links-siemensnx-1 {
@@ -1747,8 +1902,22 @@ $breakpoint argument choices:
   color: #fff;
 }
 
+@media (max-width: 37.5em) {
+  .Software__logo--links-siemensnx-1 {
+    font-size: 2rem;
+    padding: 2.5rem 4rem;
+  }
+}
+
 .Software__logo--links-imageJ {
   justify-content: center;
+}
+
+@media (max-width: 56.25em) {
+  .Software__logo--links-imageJ {
+    grid-column: 1/-1;
+    padding: 0 1.6rem;
+  }
 }
 
 .Software__logo--links-imageJ-1 {
@@ -1764,84 +1933,74 @@ $breakpoint argument choices:
   color: #fff;
 }
 
-.Software__logo:hover .Software__logo--html-css-box:not(:hover) {
-  opacity: .3;
+@media (max-width: 37.5em) {
+  .Software__logo--links-imageJ-1 {
+    font-size: 2rem;
+    padding: 2.5rem 4rem;
+  }
 }
 
-.Software__logo:hover .Software__logo--djangoBox:not(:hover) {
-  opacity: .3;
-}
-
-.Software__logo:hover .Software__logo--mysqlBox:not(:hover) {
-  opacity: .3;
-}
-
-.Software__logo:hover .Software__logo--siemensnxBox:not(:hover) {
-  opacity: .3;
-}
-
-.Software__logo:hover .Software__logo--imageJBox:not(:hover) {
-  opacity: .3;
-}
-
-.Software__logo:hover .Software__logo--html-css-box:hover {
-  opacity: 1;
-}
-
-.Software__logo:hover .Software__logo--djangoBox:hover {
-  opacity: 1;
-}
-
-.Software__logo:hover .Software__logo--mysqlBox:hover {
-  opacity: 1;
-}
-
-.Software__logo:hover .Software__logo--siemensnxBox:hover {
-  opacity: 1;
-}
-
-.Software__logo:hover .Software__logo--imageJBox:hover {
-  opacity: 1;
-}
-
-.Software__logo:hover .Software__logo--html-css-box:not(:hover) ~ .Software__logo--Info-html-css {
-  opacity: 0;
-}
-
-.Software__logo:hover .Software__logo--djangoBox:not(:hover) ~ .Software__logo--Info-django {
-  opacity: 0;
-}
-
-.Software__logo:hover .Software__logo--mysqlBox:not(:hover) ~ .Software__logo--Info-mysql {
-  opacity: 0;
-}
-
-.Software__logo:hover .Software__logo--siemensnxBox:not(:hover) ~ .Software__logo--Info-siemensnx {
-  opacity: 0;
-}
-
-.Software__logo:hover .Software__logo--imageJBox:not(:hover) ~ .Software__logo--Info-ImageJ {
-  opacity: 0;
-}
-
-.Software__logo:hover .Software__logo--html-css-box:hover ~ .Software__logo--Info-html-css {
-  opacity: 1;
-}
-
-.Software__logo:hover .Software__logo--djangoBox:hover ~ .Software__logo--Info-django {
-  opacity: 1;
-}
-
-.Software__logo:hover .Software__logo--mysqlBox:hover ~ .Software__logo--Info-mysql {
-  opacity: 1;
-}
-
-.Software__logo:hover .Software__logo--siemensnxBox:hover ~ .Software__logo--Info-siemensnx {
-  opacity: 1;
-}
-
-.Software__logo:hover .Software__logo--imageJBox:hover ~ .Software__logo--Info-ImageJ {
-  opacity: 1;
+@media (min-width: 37.5em) {
+  .Software__logo:hover .Software__logo--html-css-box:not(:hover) {
+    opacity: .3;
+  }
+  .Software__logo:hover .Software__logo--djangoBox:not(:hover) {
+    opacity: .3;
+  }
+  .Software__logo:hover .Software__logo--mysqlBox:not(:hover) {
+    opacity: .3;
+  }
+  .Software__logo:hover .Software__logo--siemensnxBox:not(:hover) {
+    opacity: .3;
+  }
+  .Software__logo:hover .Software__logo--imageJBox:not(:hover) {
+    opacity: .3;
+  }
+  .Software__logo:hover .Software__logo--html-css-box:hover {
+    opacity: 1;
+  }
+  .Software__logo:hover .Software__logo--djangoBox:hover {
+    opacity: 1;
+  }
+  .Software__logo:hover .Software__logo--mysqlBox:hover {
+    opacity: 1;
+  }
+  .Software__logo:hover .Software__logo--siemensnxBox:hover {
+    opacity: 1;
+  }
+  .Software__logo:hover .Software__logo--imageJBox:hover {
+    opacity: 1;
+  }
+  .Software__logo:hover .Software__logo--html-css-box:not(:hover) ~ .Software__logo--Info-html-css {
+    opacity: 0;
+  }
+  .Software__logo:hover .Software__logo--djangoBox:not(:hover) ~ .Software__logo--Info-django {
+    opacity: 0;
+  }
+  .Software__logo:hover .Software__logo--mysqlBox:not(:hover) ~ .Software__logo--Info-mysql {
+    opacity: 0;
+  }
+  .Software__logo:hover .Software__logo--siemensnxBox:not(:hover) ~ .Software__logo--Info-siemensnx {
+    opacity: 0;
+  }
+  .Software__logo:hover .Software__logo--imageJBox:not(:hover) ~ .Software__logo--Info-ImageJ {
+    opacity: 0;
+  }
+  .Software__logo:hover .Software__logo--html-css-box:hover ~ .Software__logo--Info-html-css {
+    opacity: 1;
+  }
+  .Software__logo:hover .Software__logo--djangoBox:hover ~ .Software__logo--Info-django {
+    opacity: 1;
+  }
+  .Software__logo:hover .Software__logo--mysqlBox:hover ~ .Software__logo--Info-mysql {
+    opacity: 1;
+  }
+  .Software__logo:hover .Software__logo--siemensnxBox:hover ~ .Software__logo--Info-siemensnx {
+    opacity: 1;
+  }
+  .Software__logo:hover .Software__logo--imageJBox:hover ~ .Software__logo--Info-ImageJ {
+    opacity: 1;
+  }
 }
 
 .Software__logo--Info {
@@ -1856,11 +2015,42 @@ $breakpoint argument choices:
   transition: all 1s;
 }
 
+@media (max-width: 56.25em) {
+  .Software__logo--Info {
+    width: 72vw;
+    grid-template-columns: repeat(6, 12vw);
+  }
+}
+
+@media (max-width: 37.5em) {
+  .Software__logo--Info {
+    width: 96vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 4rem;
+    box-shadow: none;
+  }
+}
+
 .Software__logo--Info-html-css {
   z-index: 10;
   grid-row: 2/3;
   grid-column: 2/-2;
   justify-self: center;
+  border: 3px solid #0277bd;
+}
+
+@media (max-width: 56.25em) {
+  .Software__logo--Info-html-css {
+    grid-column: 1/-1;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .Software__logo--Info-html-css {
+    border: 3px solid #0277bd;
+  }
 }
 
 .Software__logo--Info-django {
@@ -1868,6 +2058,20 @@ $breakpoint argument choices:
   grid-row: 2/3;
   grid-column: 2/-2;
   justify-self: center;
+  border: 3px solid #00695c;
+}
+
+@media (max-width: 56.25em) {
+  .Software__logo--Info-django {
+    grid-column: 1/-1;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .Software__logo--Info-django {
+    opacity: 1;
+    border: 3px solid #00695c;
+  }
 }
 
 .Software__logo--Info-mysql {
@@ -1875,6 +2079,20 @@ $breakpoint argument choices:
   grid-row: 2/3;
   grid-column: 2/-2;
   justify-self: center;
+  border: 3px solid #00758f;
+}
+
+@media (max-width: 56.25em) {
+  .Software__logo--Info-mysql {
+    grid-column: 1/-1;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .Software__logo--Info-mysql {
+    opacity: 1;
+    border: 3px solid #00758f;
+  }
 }
 
 .Software__logo--Info-siemensnx {
@@ -1882,6 +2100,20 @@ $breakpoint argument choices:
   grid-row: 2/3;
   grid-column: 2/-2;
   justify-self: center;
+  border: 3px solid #b8202d;
+}
+
+@media (max-width: 56.25em) {
+  .Software__logo--Info-siemensnx {
+    grid-column: 1/-1;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .Software__logo--Info-siemensnx {
+    opacity: 1;
+    border: 3px solid #b8202d;
+  }
 }
 
 .Software__logo--Info-ImageJ {
@@ -1889,10 +2121,30 @@ $breakpoint argument choices:
   grid-row: 2/3;
   grid-column: 2/-2;
   justify-self: center;
+  border: 3px solid #000;
+}
+
+@media (max-width: 56.25em) {
+  .Software__logo--Info-ImageJ {
+    grid-column: 1/-1;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .Software__logo--Info-ImageJ {
+    opacity: 1;
+    border: 3px solid #000;
+  }
 }
 
 .Software__logo--img {
   transition: all 1s;
+}
+
+@media (max-width: 37.5em) {
+  .Software__logo--img {
+    width: 50%;
+  }
 }
 
 .Software__logo--html-css {
@@ -1924,6 +2176,14 @@ $breakpoint argument choices:
   opacity: 1;
 }
 
+@media (max-width: 37.5em) {
+  .Software__logo--django {
+    opacity: 1;
+    margin-top: -15rem;
+    margin-bottom: -10rem;
+  }
+}
+
 .Software__logo--mysqlBox {
   grid-row: 1/2;
   grid-column: 4/5;
@@ -1939,6 +2199,13 @@ $breakpoint argument choices:
 
 .Software__logo--mysql:hover {
   opacity: 1;
+}
+
+@media (max-width: 37.5em) {
+  .Software__logo--mysql {
+    opacity: 1;
+    margin-top: -6rem;
+  }
 }
 
 .Software__logo--siemensnxBox {
@@ -1958,6 +2225,13 @@ $breakpoint argument choices:
   opacity: 1;
 }
 
+@media (max-width: 37.5em) {
+  .Software__logo--siemensnx {
+    opacity: 1;
+    margin-top: -4rem;
+  }
+}
+
 .Software__logo--imageJBox {
   grid-row: 1/2;
   grid-column: 6/7;
@@ -1973,6 +2247,13 @@ $breakpoint argument choices:
 
 .Software__logo--Imagej:hover {
   opacity: 1;
+}
+
+@media (max-width: 37.5em) {
+  .Software__logo--Imagej {
+    opacity: 1;
+    margin-top: -4rem;
+  }
 }
 
 /*
