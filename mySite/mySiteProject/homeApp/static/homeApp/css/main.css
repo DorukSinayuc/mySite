@@ -1183,6 +1183,12 @@ $breakpoint argument choices:
   }
 }
 
+@media (max-width: 37.5em) {
+  .overlay__research--infoContainer {
+    grid-template-columns: repeat(24, 4.17vw);
+  }
+}
+
 .overlay__research--date {
   grid-row: 1/2;
   grid-column: 1/-1;
@@ -1266,7 +1272,7 @@ $breakpoint argument choices:
 
 @media (max-width: 37.5em) {
   .overlay__research--header-3 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 }
 
@@ -1283,7 +1289,7 @@ $breakpoint argument choices:
 
 @media (max-width: 37.5em) {
   .overlay__research--paragraph {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 }
 
@@ -1353,6 +1359,13 @@ $breakpoint argument choices:
   .overlay__club {
     display: flex;
     flex-direction: column;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .overlay__club {
+    grid-template-columns: repeat(24, 4.17vw);
+    grid-column: 1/25;
   }
 }
 

@@ -111,6 +111,9 @@
         text-align: center;
         margin-top: 3rem;
       }
+      @include respond(phone) {
+        grid-template-columns: repeat(24,4.17vw);
+      }
 
     }
 
@@ -186,7 +189,7 @@
         font-size: 3rem;
       }
       @include respond(phone) {
-        font-size: 3rem;
+        font-size: 4rem;
       }
     }
 
@@ -199,7 +202,7 @@
       }
 
       @include respond(phone) {
-        font-size: 2.5rem;
+        font-size: 3rem;
       }
     }
 
@@ -268,6 +271,10 @@
     @include respond(tab-port) {
       display: flex;
       flex-direction: column;
+    }
+    @include respond(phone) {
+      grid-template-columns: repeat(24,4.17vw);
+      grid-column: 1/25;
     }
 
 
