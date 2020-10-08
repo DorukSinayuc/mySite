@@ -369,6 +369,10 @@
         position: relative;
         margin: 0 auto 0 5rem;
       }
+      @include respond(phone) {
+        position: relative;
+        margin: 0 auto 0 2rem;
+      }
     }
   }
 

@@ -394,6 +394,13 @@ $breakpoint argument choices:
   }
 }
 
+@media (max-width: 37.5em) {
+  .myPath__sidebar--PageNumbers {
+    position: relative;
+    margin: 0 auto 0 2rem;
+  }
+}
+
 /*
 0 - 600px:           Phone
 600px - 900px:       Tablet portrait
