@@ -10,6 +10,11 @@
   display: grid;
   grid-template-rows: repeat(2, 4.17vh) min-content;
   grid-template-columns: repeat(24,4.17vw);
+
+  @include respond(phone) {
+    background-image: none;
+    background-color: $color-grey-veryLight;
+  }
 }
 
 .myPath {
@@ -62,6 +67,10 @@
       // justify-content: center;
 
       padding: 8rem 4rem;
+
+      @include respond(phone) {
+        padding: 4rem 2rem;
+      }
     }
 
     &--header-1 {
@@ -70,6 +79,9 @@
       color: #ffcc80;
       margin-left: 4rem;
 
+      @include respond(phone) {
+        font-size: 7rem;
+      }
     }
     &--paragraph {
       font-size: 2rem;
@@ -83,6 +95,11 @@
           line-height: 7rem;
         }
       }
+      @include respond(phone) {
+        font-size: 3rem;
+        font-weight: 300;
+        line-height: 5rem;
+      }
     }
   }
 
@@ -95,7 +112,7 @@
     // grid-template-columns: repeat(22,4.17vw);
 
     background-color: $color-grey-veryLight;
-    overflow: hidden;
+    // overflow: hidden;
 
     @include respond(tab-port) {
       grid-column: 1/-1;
@@ -292,7 +309,10 @@
         // margin-right: auto;
         margin-left: 5rem;
         border-bottom: none;
-
+      }
+      @include respond(phone) {
+        font-size: 4rem;
+        margin-left: 2rem;
       }
     }
     &--header-3 {

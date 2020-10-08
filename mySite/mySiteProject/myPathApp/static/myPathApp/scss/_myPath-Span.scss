@@ -6,6 +6,10 @@
   font-weight: 300;
   padding: 0 1rem;
   // text-transform: uppercase;
+
+  @include respond(phone) {
+    font-size: 3.5rem;
+  }
 }
 
 .myLife {

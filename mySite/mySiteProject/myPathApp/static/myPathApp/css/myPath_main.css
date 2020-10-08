@@ -27,6 +27,13 @@ $breakpoint argument choices:
   grid-template-columns: repeat(24, 4.17vw);
 }
 
+@media (max-width: 37.5em) {
+  .page__myPath {
+    background-image: none;
+    background-color: #f6f6f6;
+  }
+}
+
 .myPath__container {
   grid-row: 3/4;
   grid-column: 2/24;
@@ -72,11 +79,23 @@ $breakpoint argument choices:
   padding: 8rem 4rem;
 }
 
+@media (max-width: 37.5em) {
+  .myPath__Info--overlay {
+    padding: 4rem 2rem;
+  }
+}
+
 .myPath__Info--header-1 {
   font-size: 6rem;
   font-weight: 300;
   color: #ffcc80;
   margin-left: 4rem;
+}
+
+@media (max-width: 37.5em) {
+  .myPath__Info--header-1 {
+    font-size: 7rem;
+  }
 }
 
 .myPath__Info--paragraph {
@@ -93,12 +112,19 @@ $breakpoint argument choices:
   }
 }
 
+@media (max-width: 37.5em) {
+  .myPath__Info--paragraph {
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 5rem;
+  }
+}
+
 .myPath__Videos {
   grid-row: 2/3;
   grid-column: 3/23;
   display: grid;
   background-color: #f6f6f6;
-  overflow: hidden;
 }
 
 @media (max-width: 56.25em) {
@@ -301,6 +327,13 @@ $breakpoint argument choices:
   }
 }
 
+@media (max-width: 37.5em) {
+  .myPath__sidebar--header-2 {
+    font-size: 4rem;
+    margin-left: 2rem;
+  }
+}
+
 .myPath__sidebar--header-3 a:link,
 .myPath__sidebar--header-3 a:visited {
   color: white;
@@ -386,6 +419,12 @@ $breakpoint argument choices:
   color: #3ec867;
   font-weight: 300;
   padding: 0 1rem;
+}
+
+@media (max-width: 37.5em) {
+  .myPathSpan {
+    font-size: 3.5rem;
+  }
 }
 
 .myLife {
