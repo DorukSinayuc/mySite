@@ -38,10 +38,13 @@ $breakpoint argument choices:
   grid-template-columns: repeat(22, 4.17vw);
 }
 
-.myPath__sidebar {
-  grid-row: 1/-1;
-  grid-column: 1/3;
-  background-color: #1c191b;
+@media (max-width: 56.25em) {
+  .myPath__container {
+    grid-column: 1/25;
+    grid-template-columns: repeat(24, 4.17vw);
+    grid-template-rows: repeat(3, min-content);
+    margin-top: 0rem;
+  }
 }
 
 .myPath__Info {
@@ -51,6 +54,12 @@ $breakpoint argument choices:
   background-size: cover;
   background-position: bottom;
   width: 100%;
+}
+
+@media (max-width: 56.25em) {
+  .myPath__Info {
+    grid-column: 1/-1;
+  }
 }
 
 .myPath__Info--overlay {
@@ -78,12 +87,24 @@ $breakpoint argument choices:
   margin: .5rem 4rem 2rem 4rem;
 }
 
+@media (max-width: 56.25em) {
+  .myPath__Info--paragraph:nth-child(3) {
+    line-height: 7rem;
+  }
+}
+
 .myPath__Videos {
   grid-row: 2/3;
   grid-column: 3/23;
   display: grid;
   background-color: #f6f6f6;
   overflow: hidden;
+}
+
+@media (max-width: 56.25em) {
+  .myPath__Videos {
+    grid-column: 1/-1;
+  }
 }
 
 .myPath__video {
@@ -143,6 +164,27 @@ $breakpoint argument choices:
   margin-right: 10rem;
 }
 
+@media (max-width: 56.25em) {
+  .myPath__video--row-v2 .myPath__video:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 5rem;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .myPath__video--row-v2 {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .myPath__video--row {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+  }
+}
+
 .myPath__video--info {
   display: flex;
   flex-direction: column;
@@ -165,6 +207,14 @@ $breakpoint argument choices:
 @media (max-width: 75em) {
   .myPath__video--1-container-firstPage {
     margin-right: 5.5rem;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .myPath__video--1-container-firstPage {
+    margin-right: 0;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
   }
 }
 
@@ -207,10 +257,29 @@ $breakpoint argument choices:
   }
 }
 
+@media (max-width: 56.25em) {
+  .myPath__video--2-container-firstPage {
+    margin-right: 0;
+    margin-bottom: 5rem;
+  }
+}
+
 .myPath__sidebar {
+  grid-row: 1/-1;
+  grid-column: 1/3;
+  background-color: #1c191b;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media (max-width: 56.25em) {
+  .myPath__sidebar {
+    grid-row: 3/4;
+    grid-column: 1/-1;
+    flex-direction: row;
+    padding: 2rem;
+  }
 }
 
 .myPath__sidebar--header-2 {
@@ -223,12 +292,28 @@ $breakpoint argument choices:
   margin-top: 2rem;
 }
 
+@media (max-width: 56.25em) {
+  .myPath__sidebar--header-2 {
+    margin-top: 0.7rem;
+    font-size: 5rem;
+    margin-left: 5rem;
+    border-bottom: none;
+  }
+}
+
 .myPath__sidebar--header-3 a:link,
 .myPath__sidebar--header-3 a:visited {
   color: white;
   font-size: 2rem;
   text-decoration: none;
   padding: 1rem;
+}
+
+@media (max-width: 56.25em) {
+  .myPath__sidebar--header-3 a:link,
+.myPath__sidebar--header-3 a:visited {
+    font-size: 3rem;
+  }
 }
 
 .myPath__sidebar--header-3 a:hover {
@@ -255,6 +340,47 @@ $breakpoint argument choices:
   margin-bottom: 3rem;
 }
 
+@media (max-width: 56.25em) {
+  .myPath__sidebar--PageNumbers-container h3:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 3rem;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .myPath__sidebar--PageNumbers-container {
+    flex-direction: row;
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .myPath__sidebar--PageNumbers {
+    position: relative;
+    margin: 0 auto 0 5rem;
+  }
+}
+
+/*
+0 - 600px:           Phone
+600px - 900px:       Tablet portrait
+900px - 1200px:      Tablet landscape
+1200px - 1300px:     Small Laptop
+1300px - 1400px:     medium Laptop
+
+1800+ :              Big laptop
+
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- laptop-sm
+-laptop-md
+- laptop-bg
+
+1em = 16px
+*/
 .myPathSpan {
   font-size: 3rem;
   color: #3ec867;
