@@ -330,7 +330,7 @@ $breakpoint argument choices:
 @media (max-width: 37.5em) {
   .myPath__sidebar--header-2 {
     font-size: 4rem;
-    margin-left: 2rem;
+    margin-left: 0rem;
   }
 }
 
