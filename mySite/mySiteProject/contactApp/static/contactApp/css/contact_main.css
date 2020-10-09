@@ -1,8 +1,36 @@
+/*
+0 - 600px:           Phone
+600px - 900px:       Tablet portrait
+900px - 1200px:      Tablet landscape
+1200px - 1300px:     Small Laptop
+1300px - 1400px:     medium Laptop
+
+1800+ :              Big laptop
+
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- laptop-sm
+-laptop-md
+- laptop-bg
+
+1em = 16px
+*/
 .page__contact {
   height: 100vh;
   background: linear-gradient(90deg, #0a698e 0%, #0a698e 98%);
   display: grid;
   grid-template-columns: repeat(24, 4.17vw);
+  margin-top: -8.34vh;
+}
+
+@media (max-width: 56.25em) {
+  .page__contact {
+    grid-template-rows: min-content min-content;
+    align-content: center;
+  }
 }
 
 .contact__form {
@@ -11,9 +39,82 @@
   grid-column: 1/13;
 }
 
+@media (max-width: 56.25em) {
+  .contact__form {
+    grid-column: 1/19;
+    align-items: center;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .contact__form {
+    grid-column: 1/-1;
+  }
+}
+
+.contact__form--socialMediaSmall {
+  display: none;
+}
+
+@media (max-width: 56.25em) {
+  .contact__form--socialMediaSmall {
+    grid-row: 2/3;
+    grid-column: 8/18;
+    display: block;
+    background-color: white;
+    margin-top: 4rem;
+    padding: 3rem 0;
+    border-radius: 5rem;
+  }
+  .contact__form--socialMediaSmall__links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .contact__form--socialMediaSmall__links a svg {
+    width: 4rem;
+    height: 4rem;
+    outline: 0;
+  }
+  .contact__form--socialMediaSmall__links--1 {
+    fill: #c32aa3;
+  }
+  .contact__form--socialMediaSmall__links--2 {
+    margin-left: 5rem;
+    fill: #007bb5;
+  }
+  .contact__form--socialMediaSmall__links--3 {
+    margin-left: 5rem;
+    fill: #1877f2;
+  }
+  .contact__form--socialMediaSmall__links--4 {
+    margin-left: 5rem;
+    fill: #1da1f2;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .contact__form--socialMediaSmall {
+    grid-column: 4/22;
+  }
+}
+
 .contact__form--container {
   grid-column: 4/22;
   margin: 15rem 0 auto 0;
+}
+
+@media (max-width: 56.25em) {
+  .contact__form--container {
+    grid-row: 1/2;
+    margin: 0rem 0 auto 0;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .contact__form--container {
+    grid-column: 1/-1;
+  }
 }
 
 .contact__form--container-IMG {
@@ -26,8 +127,30 @@
   grid-template-columns: repeat(18, 4.17vw);
 }
 
+@media (max-width: 56.25em) {
+  .contact__form--container-IMG {
+    background-image: linear-gradient(to right, #36cbe3, #36cbe3);
+    border-radius: 2rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .contact__form--container-IMG {
+    grid-template-columns: 1fr repeat(18, 4.17vw) 1fr;
+    background-image: linear-gradient(to right, #0a698e, #0a698e);
+    box-shadow: none;
+  }
+}
+
 .contact__form--list {
   list-style: none;
+}
+
+@media (max-width: 37.5em) {
+  .contact__form--item {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .contact__form--name {
@@ -35,11 +158,38 @@
   margin: 2rem;
 }
 
+@media (max-width: 56.25em) {
+  .contact__form--name {
+    margin-right: 0;
+    justify-content: center;
+    margin-left: 4rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .contact__form--name {
+    margin-right: 2rem;
+  }
+}
+
 .contact__form--header-1 {
   font-size: 4rem;
   font-weight: 400;
   color: white;
   padding: 2rem 0 0 2rem;
+}
+
+@media (max-width: 56.25em) {
+  .contact__form--header-1 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .contact__form--header-1 {
+    font-size: 6rem;
+    color: #28e1ff;
+  }
 }
 
 .contact__form--input {
@@ -60,9 +210,22 @@
   color: black;
 }
 
+@media (max-width: 56.25em) {
+  .contact__form--input {
+    padding: 2.5rem 4rem;
+    font-size: 2.2rem;
+  }
+}
+
 .contact__form--socialMedia {
   grid-column: 16/18;
   margin-left: 4.5rem;
+}
+
+@media (max-width: 56.25em) {
+  .contact__form--socialMedia {
+    display: none;
+  }
 }
 
 .contact__form--socialMedia__links {
@@ -115,6 +278,15 @@
   color: black;
 }
 
+@media (max-width: 56.25em) {
+  #id_name,
+#id_surname,
+#id_email,
+#id_content {
+    font-size: 2rem;
+  }
+}
+
 #id_name:focus,
 #id_surname:focus,
 #id_email:focus,
@@ -137,10 +309,36 @@
   width: 44vw;
 }
 
+@media (max-width: 56.25em) {
+  #id_email {
+    width: 55rem;
+    margin-left: 0rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  #id_email {
+    width: 95%;
+  }
+}
+
 #id_content {
   margin-bottom: 2rem;
   margin-left: 2rem;
   width: 44vw;
+}
+
+@media (max-width: 56.25em) {
+  #id_content {
+    width: 55rem;
+    margin-left: 0rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  #id_content {
+    width: 95%;
+  }
 }
 
 .contact__Success--container {

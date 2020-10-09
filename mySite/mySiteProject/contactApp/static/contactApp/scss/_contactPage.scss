@@ -1,4 +1,5 @@
 @import 'homeApp/scss/variables';
+@import "homeApp/scss/mixins";
 
 .page__contact {
   height: 100vh;
@@ -6,6 +7,13 @@
 
   display: grid;
   grid-template-columns: repeat(24,4.17vw);
+
+  margin-top: -8.34vh;
+
+  @include respond(tab-port) {
+    grid-template-rows: min-content min-content;
+    align-content: center;
+  }
 }
 
 .contact__form {
@@ -13,9 +21,80 @@
   flex-direction: column;
   grid-column: 1/13;
 
+  @include respond(tab-port) {
+    grid-column: 1/19;
+    align-items: center;
+  }
+  @include respond(phone) {
+    grid-column: 1/-1;
+  }
+
+
+  //Social media style that will come out when in tab-port size or lower
+
+  &--socialMediaSmall {
+    display: none;
+
+    @include respond(tab-port) {
+
+      grid-row: 2/3;
+      grid-column: 8/18;
+      display: block;
+
+      background-color: white;
+
+      margin-top: 4rem;
+      padding: 3rem 0;
+      border-radius: 5rem;
+
+      &__links {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        a {
+          svg {
+            width: 4rem;
+            height: 4rem;
+            outline: 0;
+          }
+        }
+
+        &--1 {
+          fill: $color-Instagram;
+        }
+        &--2 {
+          margin-left: 5rem;
+          fill: $color-linkedIn;
+        }
+        &--3 {
+          margin-left: 5rem;
+          fill: $color-Facebook;
+        }
+        &--4 {
+          margin-left: 5rem;
+          fill: $color-Twitter;
+        }
+      }
+
+    }
+
+    @include respond(phone) {
+      grid-column: 4/22;
+    }
+  }
+
   &--container {
     grid-column: 4/22;
     margin: 15rem 0 auto 0;
+
+    @include respond(tab-port) {
+      grid-row: 1/2;
+      margin: 0rem 0 auto 0;
+    }
+    @include respond(phone) {
+      grid-column: 1/-1;
+    }
 
 
     &-IMG {
@@ -29,6 +108,15 @@
       display: grid;
       grid-template-columns: repeat(18,4.17vw);
 
+      @include respond(tab-port) {
+        background-image: linear-gradient(to right, #36cbe3,#36cbe3);
+        border-radius: 2rem;
+      }
+      @include respond(phone) {
+        grid-template-columns: 1fr repeat(18,4.17vw) 1fr;
+        background-image: linear-gradient(to right, #0a698e,#0a698e);
+        box-shadow: none;
+      }
 
     }
   }
@@ -38,13 +126,24 @@
   }
 
   &--item {
-
+    @include respond(phone) {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   &--name {
     display: flex;
-
     margin: 2rem;
+
+    @include respond(tab-port) {
+      margin-right: 0;
+      justify-content: center;
+      margin-left: 4rem;
+    }
+    @include respond(phone) {
+      margin-right: 2rem;
+    }
   }
 
   &--header-1 {
@@ -53,6 +152,13 @@
     color: white;
     padding: 2rem 0 0 2rem;
 
+    @include respond(tab-port) {
+      font-size: 5rem;
+    }
+    @include respond(phone) {
+      font-size: 6rem;
+      color: #28e1ff;
+    }
   }
 
   &--input {
@@ -71,12 +177,20 @@
     margin-bottom: 2rem;
     background-color: rgba(#fff,.95);
     color: black;
+
+    @include respond(tab-port) {
+      padding: 2.5rem 4rem;
+      font-size: 2.2rem;
+    }
   }
 
   &--socialMedia {
     grid-column: 16/18;
     margin-left: 4.5rem;
 
+    @include respond(tab-port) {
+      display: none;
+    }
 
     &__links {
       display: flex;
@@ -129,6 +243,10 @@
   transition: all .3s;
   color: black;
 
+  @include respond(tab-port) {
+    font-size: 2rem;
+  }
+
   &:focus {
       outline: none;
       box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.53);
@@ -147,12 +265,28 @@
 #id_email {
   margin-bottom: 2rem;
   margin-left: 2rem;
-  width: 44vw;;
+  width: 44vw;
+
+  @include respond(tab-port) {
+    width: 55rem;
+    margin-left: 0rem;
+  }
+  @include respond(phone) {
+    width: 95%;
+  }
 }
 #id_content {
   margin-bottom: 2rem;
   margin-left: 2rem;
   width: 44vw;
+
+  @include respond(tab-port) {
+    width: 55rem;
+    margin-left: 0rem;
+  }
+  @include respond(phone) {
+    width: 95%;
+  }
 }
 
 // .contact__Success {

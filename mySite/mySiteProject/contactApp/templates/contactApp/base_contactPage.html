@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>Doruk</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     {% block link_block %}
     <link rel="stylesheet" href="{% static "homeApp/css/main.css" %}"/>
@@ -14,33 +15,35 @@
   </head>
   <body>
 
+  <div class="page__grid--CV">
+      <nav class="nav-cvPage">
+        <div class="navbar__CV">
+          <div class="navbar__CV--container">
+            <ul class="navbar__links">
+              <li class="navbar__links-element">
+                <a href="{% url 'homeApp:home' %}" class="navbar__links--1">Home</a>
+              </li>
+              <li class="navbar__links-element">
+                <a href="{% url 'homeApp:cv' %}" class="navbar__links--2">Curriculum Vitae(CV)</a>
+              </li>
+              <li class="navbar__links-element">
+                <a href="{% url 'myPathApp:mypath' %}" class="navbar__links--3">My Path</a>
+              </li>
+              <li class="navbar__links-element">
+                <a href="{% url 'blogApp:blogHome' %}" class="navbar__links--4">Blog</a>
+              </li>
+              <li class="navbar__links-element">
+                <a href="{% url 'contactApp:contactHome' %}" class="navbar__links--5">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  </div>
+
   <div class="page__contact">
 
-    <div class="page__grid--CV">
-        <nav class="nav-cvPage">
-          <div class="navbar__CV">
-            <div class="navbar__CV--container">
-              <ul class="navbar__links">
-                <li class="navbar__links-element">
-                  <a href="{% url 'homeApp:home' %}" class="navbar__links--1">Home</a>
-                </li>
-                <li class="navbar__links-element">
-                  <a href="{% url 'homeApp:cv' %}" class="navbar__links--2">Curriculum Vitae(CV)</a>
-                </li>
-                <li class="navbar__links-element">
-                  <a href="{% url 'myPathApp:mypath' %}" class="navbar__links--3">My Path</a>
-                </li>
-                <li class="navbar__links-element">
-                  <a href="{% url 'blogApp:blogHome' %}" class="navbar__links--4">Blog</a>
-                </li>
-                <li class="navbar__links-element">
-                  <a href="{% url 'contactApp:contactHome' %}" class="navbar__links--5">Contact</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-    </div>
+
 
     {% block content_block %}
 
