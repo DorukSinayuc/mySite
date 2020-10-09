@@ -182,6 +182,10 @@
       padding: 2.5rem 4rem;
       font-size: 2.2rem;
     }
+    @include respond(phone) {
+      padding: 2.5rem 4rem;
+      font-size: 2.2rem;
+    }
   }
 
   &--socialMedia {

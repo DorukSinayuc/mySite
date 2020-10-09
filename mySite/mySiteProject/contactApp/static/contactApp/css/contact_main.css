@@ -217,6 +217,13 @@ $breakpoint argument choices:
   }
 }
 
+@media (max-width: 37.5em) {
+  .contact__form--input {
+    padding: 2.5rem 4rem;
+    font-size: 2.2rem;
+  }
+}
+
 .contact__form--socialMedia {
   grid-column: 16/18;
   margin-left: 4.5rem;
