@@ -315,6 +315,17 @@
 
 .contact__Success--container {
   grid-column: 2/22;
+
+  @include respond(tab-land) {
+    margin-top: 6rem;
+  }
+  @include respond(tab-port) {
+    margin-top: -50rem;
+  }
+  @include respond(phone) {
+    margin-top: -9rem;
+    grid-column: 2/-1;
+  }
 }
 
 .contact__Success--header-1 {

@@ -352,6 +352,25 @@ $breakpoint argument choices:
   grid-column: 2/22;
 }
 
+@media (max-width: 75em) {
+  .contact__Success--container {
+    margin-top: 6rem;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .contact__Success--container {
+    margin-top: -50rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .contact__Success--container {
+    margin-top: -9rem;
+    grid-column: 2/-1;
+  }
+}
+
 .contact__Success--header-1 {
   margin-top: 8rem;
   font-size: 7rem;
